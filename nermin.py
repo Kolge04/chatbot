@@ -190,7 +190,7 @@ async def start(event):
                       [Button.url('⚡ 𝕏𝔸𝕆𝕊 𝔽𝔹𝔸ℕ', f'https://t.me/XaosResmii')],
                       [Button.url('🇦🇿 𝕆𝕎ℕ𝔼ℝ 👨‍💻', f'https://t.me/sesizKOLGE')],
 		      [Button.inline("✔ ℂℍ𝔸𝕋 𝔹𝕆𝕋", data="bot")],
-                      [Button.inline("⚙ Ə𝕄ℝ𝕃Ə𝕃", data="help")],
+                      [Button.inline("⚙ Ə𝕄ℝ𝕃Əℝ", data="help")],
                     ),
                     link_preview=False
 		   )
@@ -203,7 +203,7 @@ async def handler(event):
                       [Button.url('⚡ 𝕏𝔸𝕆𝕊 𝔽𝔹𝔸ℕ', f'https://t.me/XaosResmii')],
                       [Button.url('🇦🇿 𝕆𝕎ℕ𝔼ℝ 👨‍💻', f'https://t.me/sesizKOLGE')],
 	              [Button.inline("✔ ℂℍ𝔸𝕋 𝔹𝕆𝕋", data="bot")],
-                      [Button.inline("⚙ Ə𝕄ℝ𝕃Ə𝕃", data="help")],
+                      [Button.inline("⚙ Ə𝕄ℝ𝕃Əℝ", data="help")],
                     ),
                     link_preview=False)
 
