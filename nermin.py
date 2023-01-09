@@ -185,11 +185,12 @@ async def yeni_mesaj(event: events.NewMessage.Event):
 async def start(event):
   await event.reply("**⚡ Mən  𝕏𝔸𝕆𝕊 𝕋𝔸𝔾𝔾𝔼ℝ**\n**𝕏𝔸𝕆𝕊 Federasiyasının Rəsmi Tağ botuyam**\n**⚡ 𝕏𝔸𝕆𝕊 𝕋𝔸𝔾𝔾𝔼ℝ İlə Qrupunuzdakı Üyələri Etiket Edə Bilərəm**\n**Əmrlərlə Tanış Olmaq Üçün __ƏMRLƏR__ Butonuna Toxun**\n**ℹ Mənim Qruplarda Asan Və Sürətli İşləyə Bilməyim Üçün Mənə Qrupunuzda Sadə Adminlik Vermənizi Rica Edirem**",
                     buttons=(
-                   
+			    
 		      [Button.url('➕ ℚℝ𝕌ℙ𝔸 𝔼𝕃𝔸𝕍𝔼 𝔼𝕋 ➕', 'https://t.me/XAOS_Tagbot?startgroup=a')],
                       [Button.url('⚡ 𝕏𝔸𝕆𝕊 𝔽𝔹𝔸ℕ', f'https://t.me/XaosResmii')],
                       [Button.url('🇦🇿 𝕆𝕎ℕ𝔼ℝ 👨‍💻', f'https://t.me/sesizKOLGE')],
-                      [Button.inline("⚙ Ə𝕄ℝ𝕃Ə𝕃", data="help", "✔ ÖZƏLLİKLƏR", data="bot")],
+		      [Button.url("✔ ℂℍ𝔸𝕋 𝔹𝕆𝕋", data="bot")],
+                      [Button.inline("⚙ Ə𝕄ℝ𝕃Ə𝕃", data="help")],
                     ),
                     link_preview=False
 		   )
@@ -200,12 +201,19 @@ async def handler(event):
                       
                       [Button.url('➕ ℚℝ𝕌ℙ𝔸 𝔼𝕃𝔸𝕍𝔼 𝔼𝕋 ➕', 'https://t.me/XAOS_Tagbot?startgroup=a')],
                       [Button.url('⚡ 𝕏𝔸𝕆𝕊 𝔽𝔹𝔸ℕ', f'https://t.me/XaosResmii')],
-                      [Button.url('🇦🇿 𝕆𝕎ℕ𝔼ℝ 👨‍💻', f'https://t.me/sesizKOLGE', "✔ ÖZƏLLİKLƏR", data="bot")],
+                      [Button.url('🇦🇿 𝕆𝕎ℕ𝔼ℝ 👨‍💻', f'https://t.me/sesizKOLGE')],
+	              [Button.url("✔ ℂℍ𝔸𝕋 𝔹𝕆𝕋", data="bot")],
                       [Button.inline("⚙ Ə𝕄ℝ𝕃Ə𝕃", data="help")],
                     ),
                     link_preview=False)
 
-			     
+@client.on(events.callbackquery.CallbackQuery(data="bot"))
+async def handler(event):
+    await event.edit(f"**ℹ Bu Özəllik #XAOS Federasiyasının Daha Öncəki @XAOS_Chatbot Nan Eynidir.\n✔ Daha Əvvəl Sadəcə #TAĞBOT Özəlliyi Olan Tağ Botu Daha Əvvəl Sadəcə Tağ Edə Bilirdi.\n♻️ Daha Təkcə Tağ Deyil, Botumuz #CHATBOT Özəlliyi İlə Yeniləndi.\n✔ Botun Daxilində Olan #CHATBOT Özəlliyi İlə Qruplarda Və Ya Botun PM Daxilində Söhbət Edə Bilərsiz.\n✅ Botun Daha Yaxsı Və Rahad İşləyə Bilməsi Üçün Qrupda Sadə Adminlik Vermeyinizi Rica Edirik.**", buttons=(
+		      [Button.url("⬅️ 𝔾𝔼ℝ𝕀", data="start")],
+	            ),
+		    link_preview=False)
+
 @client.on(events.callbackquery.CallbackQuery(data="help"))
 async def handler(event):
     await event.edit(f"⚡ 𝕏𝔸𝕆𝕊 𝕋𝔸𝔾𝔾𝔼ℝ İn Əmrləri \n\n➪ /sehidler <səbəb> Şəhid Adları İlə Tağ Edər\n➪ /tag <səbəb> - 5-li Tağ Edər\n➪ /etag <səbəb> - Emoji İlə Tağ Edər\n➪ /btag <səbəb> - Bayraqlarla Tağ Edər\n➪ /mtag <səbəb>  Mafia Rolları İlı Tağ Edər\n➪ /rtag <səbəb> Rayon Və Şəhər Adları İlə Tağ Edər\n➪ /htag <səbəb> Heyvan Adları İlə Tağ Edər\n➪ /ttag <səbəb> - Tək Teək Tağ Edər\n➪ /admin <səbəb> - Adminləri Tağ Edər\n➪ /cancel - Tağ Prosesin Saxlayar\n➪ /start - Botu Başladar", buttons=(
