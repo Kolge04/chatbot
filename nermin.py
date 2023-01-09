@@ -6,7 +6,7 @@ from telethon import Button
 from telethon.sessions import StringSession
 from telethon.tl.types import ChannelParticipantsAdmins
 from telethon import TelegramClient, events
-from mesajlar.mesaj import salam, necesen, sagol, getdim, geldim, sesizKOLGE, ban, emoji1, emoji2, fed, niye, ne, hay, mal, can, balam, xos, hara, gel, gordum, taım
+from mesajlar.mesaj import salam, necesen, sagol, getdim, geldim, sesizKOLGE, ban, emoji1, emoji2, fed, niye, ne, hay, mal, can, balam, xos, hara, gel, gordum, taım, azz, enn, trrr, russ, fra
 from mesajlar.bot import yeni_user, info
 
 logging.basicConfig(
@@ -177,6 +177,28 @@ async def yeni_mesaj(event: events.NewMessage.Event):
 @client.on(events.NewMessage(pattern='(?i)tema+'))
 async def yeni_mesaj(event: events.NewMessage.Event):
     await event.reply(f"{random.choice(taım)}")
+
+@client.on(events.NewMessage(pattern='(?i)aze+'))
+async def yeni_mesaj(event: events.NewMessage.Event):
+    await event.reply(f"{random.choice(azz)}")
+ 
+@client.on(events.NewMessage(pattern='(?i)rus+'))
+async def yeni_mesaj(event: events.NewMessage.Event):
+    await event.reply(f"{random.choice(russ)}")
+ 
+@client.on(events.NewMessage(pattern='(?i)eng+'))
+async def yeni_mesaj(event: events.NewMessage.Event):
+    await event.reply(f"{random.choice(enn)}")
+ 
+@client.on(events.NewMessage(pattern='(?i)tr+'))
+async def yeni_mesaj(event: events.NewMessage.Event):
+    await event.reply(f"{random.choice(trrr)}")
+ 
+@client.on(events.NewMessage(pattern='(?i)fr+'))
+async def yeni_mesaj(event: events.NewMessage.Event):
+    await event.reply(f"{random.choice(fra)}")
+ 
+
 
 
 ######    TAĞ MODULU   #########    
