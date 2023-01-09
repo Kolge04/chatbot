@@ -580,7 +580,7 @@ heyvan = "Meymun🐵 İt🐕 At🐴 Tülkü🦊 Porsuq🐺 Pələng🦁 Çita�
 async def mentionall(event):
   global anlik_calisan
   if event.is_private:
-    return await event.respond("**Bu əmr qurup və kanallar üçün keçərlidi ❗**")
+    return await event.respond("**⛔ Bu əmr qurup və kanallar üçün keçərlidi**")
   
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
