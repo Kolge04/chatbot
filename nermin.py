@@ -2,8 +2,6 @@ import random
 import os
 import logging
 import asyncio
-import time
-import youtube_dl
 from telethon import Button
 from telethon.sessions import StringSession
 from telethon.tl.types import ChannelParticipantsAdmins
