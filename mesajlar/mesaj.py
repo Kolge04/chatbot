@@ -276,8 +276,27 @@ taım = (
 )  
   
   
-  
-  
+azz = (
+"https://t.me/setlanguage/az-beta",
+)
+
+trrr = (
+"https://t.me/setlanguage/tr-beta",
+)
+
+russ = (
+"https://t.me/setlanguage/ru-beta",
+)
+
+
+enn = (
+"https://t.me/setlanguage/en-beta",
+)
+
+
+fra = (
+"https://t.me/setlanguage/fr-beta",
+)
   
   
   
