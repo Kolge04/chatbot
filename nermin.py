@@ -1,5 +1,22 @@
+import random
+import os
+import logging
+import asyncio
+import requests
+import time
+import youtube_dl
+from telethon import Button
+from telethon.sessions import StringSession
+from telethon.tl.types import ChannelParticipantsAdmins
+from telethon import TelegramClient, events
+from mesajlar.mesaj import salam, necesen, sagol, getdim, geldim, sesizKOLGE, ban, emoji1, emoji2, fed, niye, ne, hay, mal, can, balam, xos, hara, gel, gordum
+from mesajlar.bot import yeni_user, info
 
-
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(name)s - [%(levelname)s] - %(message)s'
+)
+LOGGER = logging.getLogger(__name__)
 
 
 api_id = int(os.environ.get("APP_ID"))
