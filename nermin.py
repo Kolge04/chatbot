@@ -189,7 +189,7 @@ async def start(event):
 		      [Button.url('➕ ℚℝ𝕌ℙ𝔸 𝔼𝕃𝔸𝕍𝔼 𝔼𝕋 ➕', 'https://t.me/XAOS_Tagbot?startgroup=a')],
                       [Button.url('⚡ 𝕏𝔸𝕆𝕊 𝔽𝔹𝔸ℕ', f'https://t.me/XaosResmii')],
                       [Button.url('🇦🇿 𝕆𝕎ℕ𝔼ℝ 👨‍💻', f'https://t.me/sesizKOLGE')],
-                      [Button.inline("⚙ Ə𝕄ℝ𝕃Ə𝕃", data="help")],
+                      [Button.inline("⚙ Ə𝕄ℝ𝕃Ə𝕃", data="help", "✔ ÖZƏLLİKLƏR", data="bot")],
                     ),
                     link_preview=False
 		   )
