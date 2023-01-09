@@ -6,7 +6,7 @@ from telethon import Button
 from telethon.sessions import StringSession
 from telethon.tl.types import ChannelParticipantsAdmins
 from telethon import TelegramClient, events
-from mesajlar.mesaj import salam, necesen, sagol, getdim, geldim, sesizKOLGE, ban, emoji1, emoji2, fed, niye, ne, hay, mal, can, balam, xos, hara, gel, gordum
+from mesajlar.mesaj import salam, necesen, sagol, getdim, geldim, sesizKOLGE, ban, emoji1, emoji2, fed, niye, ne, hay, mal, can, balam, xos, hara, gel, gordum, taım
 from mesajlar.bot import yeni_user, info
 
 logging.basicConfig(
@@ -173,6 +173,11 @@ async def yeni_mesaj(event: events.NewMessage.Event):
 @client.on(events.NewMessage(pattern='(?i)gördün+'))
 async def yeni_mesaj(event: events.NewMessage.Event):
     await event.reply(f"{random.choice(gordum)}")
+
+@client.on(events.NewMessage(pattern='(?i)tema+'))
+async def yeni_mesaj(event: events.NewMessage.Event):
+    await event.reply(f"{random.choice(taım)}")
+
 
 ######    TAĞ MODULU   #########    
     
