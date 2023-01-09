@@ -189,7 +189,7 @@ async def start(event):
 		      [Button.url('➕ ℚℝ𝕌ℙ𝔸 𝔼𝕃𝔸𝕍𝔼 𝔼𝕋 ➕', 'https://t.me/XAOS_Tagbot?startgroup=a')],
                       [Button.url('⚡ 𝕏𝔸𝕆𝕊 𝔽𝔹𝔸ℕ', f'https://t.me/XaosResmii')],
                       [Button.url('🇦🇿 𝕆𝕎ℕ𝔼ℝ 👨‍💻', f'https://t.me/sesizKOLGE')],
-		      [Button.url("✔ ℂℍ𝔸𝕋 𝔹𝕆𝕋", data="bot")],
+		      [Button.inline("✔ ℂℍ𝔸𝕋 𝔹𝕆𝕋", data="bot")],
                       [Button.inline("⚙ Ə𝕄ℝ𝕃Ə𝕃", data="help")],
                     ),
                     link_preview=False
@@ -202,7 +202,7 @@ async def handler(event):
                       [Button.url('➕ ℚℝ𝕌ℙ𝔸 𝔼𝕃𝔸𝕍𝔼 𝔼𝕋 ➕', 'https://t.me/XAOS_Tagbot?startgroup=a')],
                       [Button.url('⚡ 𝕏𝔸𝕆𝕊 𝔽𝔹𝔸ℕ', f'https://t.me/XaosResmii')],
                       [Button.url('🇦🇿 𝕆𝕎ℕ𝔼ℝ 👨‍💻', f'https://t.me/sesizKOLGE')],
-	              [Button.url("✔ ℂℍ𝔸𝕋 𝔹𝕆𝕋", data="bot")],
+	              [Button.inline("✔ ℂℍ𝔸𝕋 𝔹𝕆𝕋", data="bot")],
                       [Button.inline("⚙ Ə𝕄ℝ𝕃Ə𝕃", data="help")],
                     ),
                     link_preview=False)
@@ -210,7 +210,7 @@ async def handler(event):
 @client.on(events.callbackquery.CallbackQuery(data="bot"))
 async def handler(event):
     await event.edit(f"**ℹ Bu Özəllik #XAOS Federasiyasının Daha Öncəki @XAOS_Chatbot Nan Eynidir.\n✔ Daha Əvvəl Sadəcə #TAĞBOT Özəlliyi Olan Tağ Botu Daha Əvvəl Sadəcə Tağ Edə Bilirdi.\n♻️ Daha Təkcə Tağ Deyil, Botumuz #CHATBOT Özəlliyi İlə Yeniləndi.\n✔ Botun Daxilində Olan #CHATBOT Özəlliyi İlə Qruplarda Və Ya Botun PM Daxilində Söhbət Edə Bilərsiz.\n✅ Botun Daha Yaxsı Və Rahad İşləyə Bilməsi Üçün Qrupda Sadə Adminlik Vermeyinizi Rica Edirik.**", buttons=(
-		      [Button.url("⬅️ 𝔾𝔼ℝ𝕀", data="start")],
+		      [Button.inline("⬅️ 𝔾𝔼ℝ𝕀", data="start")],
 	            ),
 		    link_preview=False)
 
