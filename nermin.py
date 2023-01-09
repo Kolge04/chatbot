@@ -128,7 +128,7 @@ async def yeni_mesaj(event: events.NewMessage.Event):
     await event.reply(f"{random.choice(hay)}")
     
 @client.on(events.NewMessage(pattern='(?i)mal+'))
-@Nermin.on(events.NewMessage(pattern='(?i)maal+'))
+@client.on(events.NewMessage(pattern='(?i)maal+'))
 @client.on(events.NewMessage(pattern='(?i)qoyun+'))
 async def yeni_mesaj(event: events.NewMessage.Event):
     await event.reply(f"{random.choice(mal)}")
