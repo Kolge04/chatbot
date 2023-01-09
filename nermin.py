@@ -2,7 +2,6 @@ import random
 import os
 import logging
 import asyncio
-import requests
 import time
 import youtube_dl
 from telethon import Button
