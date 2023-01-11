@@ -7,7 +7,7 @@ from telethon.sessions import StringSession
 from telethon.tl.types import ChannelParticipantsAdmins
 from telethon import TelegramClient, events
 from mesajlar.mesaj import taım, azz, enn, trrr, russ, fra
-from mesajlar.bot import yeni_user, infom
+from mesajlar.bot import yeni_user, ınfom
 
 logging.basicConfig(
     level=logging.INFO,
