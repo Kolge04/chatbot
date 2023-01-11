@@ -6,8 +6,8 @@ from telethon import Button
 from telethon.sessions import StringSession
 from telethon.tl.types import ChannelParticipantsAdmins
 from telethon import TelegramClient, events
-from mesajlar.mesaj import salam, necesen, sagol, getdim, geldim, sesizKOLGE, ban, emoji1, emoji2, fed, niye, ne, hay, mal, can, balam, xos, hara, gel, gordum, taım, azz, enn, trrr, russ, fra
-from mesajlar.bot import yeni_user, info
+from mesajlar.mesaj import taım, azz, enn, trrr, russ, fra
+from mesajlar.bot import yeni_user,
 
 logging.basicConfig(
     level=logging.INFO,
