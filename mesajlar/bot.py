@@ -1,4 +1,7 @@
-
+ınfom = (
+"SALAM 😁😁",
+"HAYCAN 😅",
+)
 
 yeni_user = (
 "Xoş gəlin Əzizim 🥰",
