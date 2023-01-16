@@ -1,1 +1,1 @@
-worker: python3 nermin.py
+worker: python3 bot.py
