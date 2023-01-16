@@ -1,6 +1,7 @@
 ınfom = (
 "SALAM 😁😁",
 "HAYCAN 😅",
+"Qırıl 😅",
 )
 
 yeni_user = (
