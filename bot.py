@@ -35,6 +35,12 @@ async def handler(event):
     if event.user_joined:
         await event.reply(f"{random.choice(yeni_user)}")
 
+@client.on(events.ChatAction)
+async def handler(event):
+    if event.user_left:
+        await event.reply("Səni tanimaq gözəl idi 🙃")
+
+
 	
 
 
