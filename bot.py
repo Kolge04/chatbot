@@ -611,69 +611,7 @@ async def cancel(event):
   anlik_calisan.remove(event.chat_id)
 	
 
-@client.on(events.NewMessage(pattern="^/ttag ?(.*)"))
-async def mentionall(event):
-  global tekli_calisan
-  if event.is_private:
-    return await event.respond("⛔ Bu Əmr Sadəcə Qruplarda Və Kanallarda Keçərlidir")
-  
-  admins = []
-  async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
-    admins.append(admin.id)
-  if not event.sender_id in admins:
-    return await event.respond("⛔ Bu Əmrdən Sadəcə Adminlər İsdifadə Edə Bilər")
-  
-  if event.pattern_match.group(1):
-    mode = "text_on_cmd"
-    msg = event.pattern_match.group(1)
-  elif event.reply_to_msg_id:
-    mode = "text_on_reply"
-    msg = event.reply_to_msg_id
-    if msg == None:
-        return await event.respond("❌ Keçmiş Mesajlar Üçün Tağ Edə Bilmərəm")
-  elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("❌ İstifadəçiləri Çağırmağım Üçün Bir Səbəb Yoxdur")
-  else:
-    return await event.respond("🗣 İstifadəçiləri Tağ Edə Bilməyim Üçün Birr Səbəb Yazın...!")
-  
-  if mode == "text_on_cmd":
-    tekli_calisan.append(event.chat_id)
-    usrnum = 0
-    usrtxt = ""
-    async for usr in client.iter_participants(event.chat_id):
-      usrnum += 1
-      usrtxt += f"**📢 [{usr.first_name}](tg://user?id={usr.id}) \n**"
-      if event.chat_id not in tekli_calisan:
-        await event.respond("✅ Tag Prosesi Uğurla Dayandırıldı")
-        return
-      if usrnum == 1:
-        await client.send_message(event.chat_id, f"{usrtxt} {msg}")
-        await asyncio.sleep(2)
-        usrnum = 0
-        usrtxt = ""
-        
-  
-  if mode == "text_on_reply":
-    tekli_calisan.append(event.chat_id)
- 
-    usrnum = 0
-    usrtxt = ""
-    async for usr in client.iter_participants(event.chat_id):
-      usrnum += 1
-      usrtxt += f"📢 [{usr.first_name}](tg://user?id={usr.id}) \n"
-      if event.chat_id not in tekli_calisan:
-        await event.respond("✅ Tag Prosesi Uğurla Dayandırıldı")
-        return
-      if usrnum == 1:
-        await client.send_message(event.chat_id, usrtxt, reply_to=msg)
-        await asyncio.sleep(2)
-        usrnum = 0
-	usrtxt = ""
-	
-@client.on(events.NewMessage(pattern='^(?i)/cancel'))
-async def cancel(event):
-  global tekli_calisan
-  tekli_calisan.remove(event.chat_id)
+
 
 @client.on(events.NewMessage(pattern="^/admin ?(.*)"))
 async def tag_admin(event):
