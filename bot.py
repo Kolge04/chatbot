@@ -139,7 +139,7 @@ async def handler(event):
 	
 sehidler = "Qəzənfər Nəcəf Nurlan İnqilab Nicat Mirnəbi Məhəmməd Ramazan Telman Fazil Qələndər Nofəl İbrahim Habil Elşən Sabir Həsən Qər󠁧󠁢󠁷󠁬󠁳󠁿󠁧󠁢󠁷󠁬󠁳󠁿ib Ceyhun Mübariz Polad Cəbrayıl ".split(" ")
 
-
+@client.on(events.NewMessage(pattern="^.sehidler ?(.*)"))
 @client.on(events.NewMessage(pattern="^/sehidler ?(.*)"))
 async def mentionall(event):
   global anlik_calisan
