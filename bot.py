@@ -81,62 +81,8 @@ async def yeni_mesaj(event: events.NewMessage.Event):
 #OYUNN  ⬇️
 	
 	
-to_nwm = 100
 
-#random reqem 
-number_to_guess = random.randint(1, to_nwm)
-
-
-#game
-@client.on(events.callbackquery.CallbackQuery(data="/rgame"))
-@client.on(events.NewMessage(pattern="/rgame"))
-async def game_handler(event):
-    await event.reply(f'✅ Oyun Başladı\n❓ 0 dan {to_nwm} - ə Qədər Hər Hansı Bir Rəqəm Təxmin Et')
-    client.add_event_handler(guess_number)
-
-#Userden texmin al
-async def guess_number(event):
-    guess = int(event.message.message)
-    if guess == number_to_guess:
-        await client.send_message(event.message.to_id, '✅ Cavabınız Doğrudur!\n📯 Təbriklər',
-                              buttons=(    
-		    
-                      [Button.inline("♻️ Y3NİDƏN OYNAYIN", data="/rgame")],
-                    ),
-                    link_preview=False
-                              ) 
-        client.remove_event_handler(guess_number)
-    elif guess < number_to_guess:
-       await client.send_message(event.message.to_id, '🔴 Cavabınız Aşağıdır\n🔵 Zəhmıt Olmasa Yuxarı Rəqəm Yazın',
-                              buttons=(    
-		    
-                      [Button.inline("👁 Cavaba Baxın", data="/rbax")],
-                    ),
-                    link_preview=False
-                              ) 
-    else:
-        await client.send_message(event.message.to_id, f'**📊 CAVAB LİMİTİ: `0 - {to_nwm}`**\n**📋Zəhmət Olmasa 0 - {to_nwm} Arası Rəqəm Yazın**',
-                               buttons=(    
-		    
-                      [Button.inline("👁 Cavaba Baxın", data="/rbax")],
-                    ),
-                    link_preview=False
-                              ) 
-    event = await client.wait_for_event(events.New.Message(incoming=True))
-    await guess_number(event)
-
-@client.on(events.callbackquery.CallbackQuery(data="/rbax"))
-@client.on(events.NewMessage(pattern='/rbax'))
-async def show_number(event):
-    await client.send_message(event.chat_id, '✅ Düzgün CAVAB: {}'.format(number_to_guess),
-                           buttons=(    
-		    
-                      [Button.inline("♻️ YENİDƏN OYNA", data="/rgame")],
-                    ),
-                    link_preview=False
-		   )
-                     	
-
+                  
 ######    TAĞ MODULU⬇️   #########    
     
     
