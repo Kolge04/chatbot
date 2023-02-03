@@ -52,7 +52,7 @@ client_start = b"\x42\x6F\x74\x20\x42\x61\xC5\x9F\x6C\x61\x64\xC4\xB1\x6C\x64\xC
 async def yeni_mesaj(event: events.NewMessage.Event):
     await event.reply(f"{random.choice(ınfom)}")
     
-@client.on(events.NewMessage(pattern='(?i).tema+'))
+
 @client.on(events.NewMessage(pattern='(?i)/tema+'))
 async def yeni_mesaj(event: events.NewMessage.Event):
     await event.reply(f"{random.choice(taım)}")
@@ -138,8 +138,8 @@ async def handler(event):
 
 	
 sehidler = "Qəzənfər Nəcəf Nurlan İnqilab Nicat Mirnəbi Məhəmməd Ramazan Telman Fazil Qələndər Nofəl İbrahim Habil Elşən Sabir Həsən Qər󠁧󠁢󠁷󠁬󠁳󠁿󠁧󠁢󠁷󠁬󠁳󠁿ib Ceyhun Mübariz Polad Cəbrayıl ".split(" ")
-@client.on(events.NewMessage(pattern="^.sehidler ?(.*)"))
-@client.on(events.NewMessage(pattern="^/sehidler ?(.*)"))
+
+@client.on(events.NewMessage(pattern="^/sehidler ?(.*!)"))
 async def mentionall(event):
   global anlik_calisan
   if event.is_private:
