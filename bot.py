@@ -74,10 +74,28 @@ async def unpin(event):
     if event.sender_id == SAHIB:
         if not event.reply_to_msg_id:
             return await event.reply("Bir pinlənən mesajı cavablayın")
-        await event.reply("Unpinləndi")
+        await event.reply("Pinlənmiş mesaj qaldırıldı")
         await event.client.unpin_message(event.chat_id)
     else:
         await event.reply("Sən sahib deyilsən unpinləməyə çalışma")
+ #------------------------------------'xxxxxxxxxxxxxxx
+
+#      telegraph   
+
+@client.on(events.NewMessage(pattern="^.tgh ?(.*)"))
+async def telegraph(event):
+        if event.reply_to_msg_id:
+            reply_message = await event.get_reply_message()
+            if reply_message.media:
+                downloaded_file_name = await client.download_media(reply_message)
+                response = post("https://telegra.ph/upload", files={"file": ("file.png", open(downloaded_file_name, "rb"))})
+                remove(downloaded_file_name)
+                await client.send_message(event.chat_id, f"**Link:** https://telegra.ph{response.json()[0]['src']}", reply_to=event.reply_to_msg_id)
+            else:
+                await client.send_message(event.chat_id, "Bir şəkilə cavab verin", reply_to=event.reply_to_msg_id)
+        else:
+            await client.send_message(event.chat_id, "Bir şəkilə cavab verin", reply_to=event.reply_to_msg_id)
+ 
  
 	
 	
