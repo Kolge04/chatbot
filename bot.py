@@ -56,7 +56,7 @@ async def id(event):
   #----------------------------------------
 
    ##  PİN  UNPİN ✴
-SAHIB = 5663585448, 5490090040, 1691031782, 5941861677
+SAHIB = 5663585448
 	
 @client.on(events.NewMessage(pattern="^.pin ?(.*)"))
 async def pin(event):
