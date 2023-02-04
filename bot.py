@@ -53,7 +53,32 @@ async def id(event):
         else:
             return await event.reply(f"**İstifadəçi id:** `{user_id}`\n**Qrup id:** `{chat_id}`")
           
-          	
+  #----------------------------------------
+
+   ##  PİN  UNPİN ✴
+SAHIB = 5663585448
+	
+@client.on(events.NewMessage(pattern="^.pin ?(.*)"))
+async def pin(event):
+    if event.sender_id == SAHIB:
+        if not event.reply_to_msg_id:
+            return await event.reply("Bir mesajı cavablayın")
+        await event.reply("Pinləndi")
+        await event.client.pin_message(event.chat_id, event.reply_to_msg_id, notify=True)
+    else:
+        await event.reply("Sən sahib deyilsən pinləməyə çalışma")
+ 
+#Bu kodu @edalet_22 tərəfindən @RoBotlarimTg kanalı üçün yazılmışdır (bu messagı silməyin!!!!!!)
+@client.on(events.NewMessage(pattern="^.unpin ?(.*)"))
+async def unpin(event):
+    if event.sender_id == SAHIB:
+        if not event.reply_to_msg_id:
+            return await event.reply("Bir pinlənən mesajı cavablayın")
+        await event.reply("Unpinləndi")
+        await event.client.unpin_message(event.chat_id)
+    else:
+        await event.reply("Sən sahib deyilsən unpinləməyə çalışma")
+ 
 	
 	
 
