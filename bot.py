@@ -2,6 +2,7 @@ import random
 import os
 import logging
 import asyncio
+from time import time
 from telethon import Button
 from telethon.sessions import StringSession
 from telethon.tl.types import ChannelParticipantsAdmins
@@ -27,6 +28,34 @@ anlik_calisan = []
 tekli_calisan = []
 
 #---------------‐------------------‐-------
+
+      #####İD PY 🆔️🆔️
+		
+	
+@client.on(events.NewMessage(pattern="^.id ?(.*)"))
+async def id(event):
+    if event.reply_to_msg_id:
+        previous_message = await event.get_reply_message()
+        user_id = previous_message.sender_id
+        chat_id = event.chat_id
+        if event.is_private:
+            return await event.reply(f"**Sizin Telegram id:** `{user_id}`")
+        else:
+            return await event.reply(f"**İstifadəçi id:** `{user_id}`\n**Qrup id:** `{chat_id}`")
+
+
+#@edalet_22 terefindən @RoBotlarimTg üçün yazilib silmədən istifadə edin
+    else:
+        user_id = event.sender_id
+        chat_id = event.chat_id
+        if event.is_private:
+            return await event.reply(f"**Sizin Telegram id:** `{user_id}`")
+        else:
+            return await event.reply(f"**İstifadəçi id:** `{user_id}`\n**Qrup id:** `{chat_id}`")
+          
+          	
+	
+	
 
 
 #   #########Yeni istifadəçi mesajı⬇️  ##########
