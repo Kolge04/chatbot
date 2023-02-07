@@ -196,7 +196,7 @@ async def yeni_mesaj(event: events.NewMessage.Event):
 
 @client.on(events.NewMessage(pattern="(?i).dc+"))
 async def yeni_mesaj(event: events.NewMessage.Event):
-     ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
+ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
     await event.reply(f"salam {ad} aee")
 	
     
