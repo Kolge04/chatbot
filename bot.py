@@ -187,7 +187,7 @@ async def yeni_mesaj(event: events.NewMessage.Event):
 
 @client.on(events.NewMessage(pattern="(?i).dc+"))
 async def yeni_mesaj(event: events.NewMessage.Event):
-    await event.reply("salqm", 
+    await event.reply(f"{random.choice(azz)}",
 		      buttons=(
 			      
                       [Button.inline("DPĞRULUQ ⭐", data="⭐")],      
