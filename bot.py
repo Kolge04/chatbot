@@ -196,7 +196,7 @@ async def dc(event):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
     await event.reply(f"salam {ad}")
 	
-@client.on(events.NewMessage(pattern="^.dc ?(.*)"))
+@client.on(events.NewMessage(pattern="^.dcs ?(.*)"))
 async def dc(event):
   global anlik_calisan
   if event.is_private:
