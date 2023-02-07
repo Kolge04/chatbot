@@ -134,7 +134,7 @@ async def banda(event):
         if user.deleted:
             mentions += f"\nSilinmiş hesap `{user.id}`"
             deleted += 1
-            await event.client.kick_participant(event.chat_id, user.id)
+            await event.app.kick_participant(event.chat_id, user.id)
     mentions += f"\nSilinmiş hesaplar` = {deleted}`\n\n__• By @EdaletRoBot__"
     await event.reply(mentions)
     
