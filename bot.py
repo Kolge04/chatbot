@@ -44,7 +44,7 @@ async def id(event):
         if event.is_private:
             return await event.reply(f"**🆔️ id:** `{user_id}`\n**📎 link:-** [Toxun 👆](tg://settings)")
         else:
-            return await event.reply(f"**👤 Sən**\n**🆔️ id:-** `{user_id}`\n**📎 link:-** [Toxun 👆](tg://settings)\n\n**👥 GRUP**\n**🆔️ id:-** `{chat_id}`")
+            return await event.reply(f"**👤 Sən**\n**🆔️ id:-** `{user_id}`\n**📎 link:-** [Toxun 👆](tg://settings)\n\n**👥 GRUP**\n**🆔️ id:** `{chat_id}`")
 
 
 #@edalet_22 terefindən @RoBotlarimTg üçün yazilib silmədən istifadə edin
@@ -54,7 +54,7 @@ async def id(event):
         if event.is_private:
             return await event.reply(f"**🆔️ id:** `{user_id}`\n**📎 link:-** [Toxun 👆](tg://settings)")
         else:
-            return await event.reply(f"**👤 Sən**\n**🆔️ id:-** `{user_id}`\n**📎 link:-** [Toxun 👆](tg://settings)\n\n**👥 GRUP**\n**🆔️ id:-** `{chat_id}`")
+            return await event.reply(f"**👤 Sən**\n**🆔️ id:-** `{user_id}`\n**📎 link:-** [Toxun 👆](tg://settings)\n\n**👥 GRUP**\n**🆔️ id:** `{chat_id}`")
     
   #----------------------------------------
 
