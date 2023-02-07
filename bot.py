@@ -45,13 +45,14 @@ async def id(event):
 
 
 #@edalet_22 terefindən @RoBotlarimTg üçün yazilib silmədən istifadə edin
+ad = f"[{usr.first_name}](tg://user?id={usr.id})"
     else:
         user_id = event.sender_id
         chat_id = event.chat_id
         if event.is_private:
             return await event.reply(f"**Sizin Telegram id:** `{user_id}`")
         else:
-            return await event.reply(f"**İstifadəçi id:** `{user_id}`\n**Qrup id:** `{chat_id}`")
+            return await event.reply(f"**İstifadəçi id:** `{user_id}`\n**Qrup id:** `{chat_id}`\n**İSDİFADƏÇİ: {ad}")
           
   #----------------------------------------
 
