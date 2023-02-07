@@ -31,7 +31,7 @@ tekli_calisan = []
 
       #####İD PY 🆔️🆔️
 		
-	
+ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
 @client.on(events.NewMessage(pattern="^.id ?(.*)"))
 async def id(event):
     if event.reply_to_msg_id:
@@ -45,7 +45,6 @@ async def id(event):
 
 
 #@edalet_22 terefindən @RoBotlarimTg üçün yazilib silmədən istifadə edin
-ad = f"[{usr.first_name}](tg://user?id={usr.id})"
     else:
         user_id = event.sender_id
         chat_id = event.chat_id
