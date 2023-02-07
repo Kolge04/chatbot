@@ -207,6 +207,9 @@ async def dc(event):
     admins.append(admin.id)
   if not event.sender_id in admins:
     return await event.respond("**Bu əmr sadəcə adminlər istifadə edə bilər 〽️**")
+ 
+  else:
+    return await event.respond("🗣 İstifadəçiləri Tağ Edə Bilməyim Üçün Bir Səbəb Yazın...!")
   
 
 
