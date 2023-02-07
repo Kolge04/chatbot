@@ -193,7 +193,7 @@ async def yeni_mesaj(event: events.NewMessage.Event):
                       [Button.inline("DPĞRULUQ ⭐", data="⭐")],      
                       [Button.inline("CƏSARƏT 💪", data="💪")],
 	            ),
-		    link_previvw=False
+		    link_preview=False
 		   )
 @client.on(events.callbackquery.CallbackQuery(data="tema"))
 async def yeni_mesaj(event: events.NewMessage.Event):
