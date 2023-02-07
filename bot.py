@@ -176,16 +176,13 @@ async def unpin(event):
 
 @client.on(events.ChatAction)
 async def handler(event):
-  if event.is_private:
-    async for usr in client.iter_participants(event.chat_id):
-     ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
     if event.user_joined:
-        await event.reply(f"{random.choice(yeni_user)} - {ad}")
+        await event.reply(f"{random.choice(yeni_user)}")
 
 @client.on(events.ChatAction)
 async def handler(event):
     if event.user_left:
-        await event.reply(f"Səni tanimaq gözəl idi 🙃")
+        await event.reply(f"Səni tanimaq gözəl idi [{usr.first_name}](tg://user?id={usr.id})   🙃")
 #---------------------------------------‐-----------------
 
 #    #######CHAT MESAJLAR⬇️  #########
