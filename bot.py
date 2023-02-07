@@ -164,14 +164,6 @@ async def unpin(event):
         await event.reply("Sən sahib deyilsən unpinləməyə çalışma")
  #------------------------------------'xxxxxxxxxxxxxxx
 
-#      telegraph   
-
-
-
-
-
-
-
 #   #########Yeni istifadəçi mesajı⬇️  ##########
 
 @client.on(events.ChatAction)
@@ -189,17 +181,20 @@ async def handler(event):
 
 client_start = b"\x42\x6F\x74\x20\x42\x61\xC5\x9F\x6C\x61\x64\xC4\xB1\x6C\x64\xC4\xB1\x2E\x2E\x2E\x0A\x4F\x77\x6E\x65\x72\x3A\x20\x61\x79\x6B\x68\x61\x6E\x5F\x73\x20\x7C\x20\x61\x79\x6B\x68\x61\x6E\x30\x32\x36\x0A\x74\x2E\x6D\x65\x2F\x52\x6F\x42\x6F\x74\x6C\x61\x72\x69\x6D\x54\x67" 
 
-
 @client.on(events.NewMessage(pattern='(?i)/ınfo+'))
 async def yeni_mesaj(event: events.NewMessage.Event):
     await event.reply(f"{random.choice(ınfom)}")
 
 @client.on(events.NewMessage(pattern="(?i).dc+"))
 async def yeni_mesaj(event: events.NewMessage.Event):
-ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
-    await event.reply(f"salam {ad} aee")
-	
-    
+    await event.reply("salqm", 
+		      buttons=(
+			      
+                      [Button.inline("DPĞRULUQ ⭐", data="⭐")],      
+                      [Button.inline("CƏSARƏT 💪", data="💪")],
+	            ),
+		    link_previvw=False
+		   )
 @client.on(events.callbackquery.CallbackQuery(data="tema"))
 async def yeni_mesaj(event: events.NewMessage.Event):
     await event.respond(f"{random.choice(taım)}",
