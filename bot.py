@@ -42,9 +42,9 @@ async def id(event):
         user_id = previous_message.sender_id
         chat_id = event.chat_id
         if event.is_private:
-            return await event.reply(f"**Sizin Telegram id:** `{user_id}`")
+            return await event.reply(f"**🆔️ id:** `{user_id}`\n**📎 link:-** [Toxun 👆](tg://settings)")
         else:
-            return await event.reply(f"**İstifadəçi id:** `{user_id}`\n**Qrup id:** `{chat_id}`")
+            return await event.reply(f"**👤 Sən**\n**🆔️ id:-** `{user_id}`\n**📎 link:-** [Toxun 👆](tg://settings)\n\n**👥 GRUP**\n**🆔️ id:-** `{chat_id}`")
 
 
 #@edalet_22 terefindən @RoBotlarimTg üçün yazilib silmədən istifadə edin
@@ -52,12 +52,10 @@ async def id(event):
         user_id = event.sender_id 
         chat_id = event.chat_id
         if event.is_private:
-            return await event.reply(f"**Sizin Telegram id:** `{user_id}`")
+            return await event.reply(f"**🆔️ id:** `{user_id}`\n**📎 link:-** [Toxun 👆](tg://settings)")
         else:
-            return await event.reply(f"**👤 Sən**\n**🆔️ id:-** `{user_id}`\n**📎 link:-** [Toxun 👆](tg://settings)\n\n**👥 GRUP**\n**🆔️ id:-** `{chat_id}`\n{title}")
-    info = await event.client.get_entity(event.chat_id)
-    title = info.title if info.title else "This chat"
-          
+            return await event.reply(f"**👤 Sən**\n**🆔️ id:-** `{user_id}`\n**📎 link:-** [Toxun 👆](tg://settings)\n\n**👥 GRUP**\n**🆔️ id:-** `{chat_id}`")
+    
   #----------------------------------------
 
 
