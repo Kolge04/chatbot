@@ -31,7 +31,7 @@ tekli_calisan = []
 
       #####İD PY 🆔️🆔️
 		
-ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
+ad = f"[{usr.first_name}](tg://user?id={usr.id})"
 @client.on(events.NewMessage(pattern="^.id ?(.*)"))
 async def id(event):
     if event.reply_to_msg_id:
@@ -47,7 +47,6 @@ async def id(event):
 #@edalet_22 terefindən @RoBotlarimTg üçün yazilib silmədən istifadə edin
     else:
         user_id = event.sender_id 
-	sender_name = event.sender_name
         chat_id = event.chat_id
         if event.is_private:
             return await event.reply(f"**Sizin Telegram id:** `{user_id}`")
