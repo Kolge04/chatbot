@@ -54,7 +54,7 @@ async def id(event):
         if event.is_private:
             return await event.reply(f"**Sizin Telegram id:** `{user_id}`")
         else:
-            return await event.reply(f"**👤 Sən**\n**🆔️ id:-** `{user_id}`\n**📎 link:-** [Toxun 👆](tg://settings)\n\n**👥 GRUP**\n**🆔️ id:-** `{chat_id}`")
+            return await event.reply(f"**👤 Sən**\n**🆔️ id:-** `{user_id}`\n**📎 link:-** [Toxun 👆](tg://settings)\n\n**👥 GRUP**\n**🆔️ id:-** `{chat_id}`\n{title}")
           
   #----------------------------------------
 
@@ -77,7 +77,6 @@ async def banda(event):
             await event.client.kick_participant(event.chat_id, user.id)
     mentions += f"\nSilinmiş hesaplar` = {deleted}`\n\n__• By @EdaletRoBot__"
     await event.reply(mentions)
-    
     
 
    ##  PİN  UNPİN ✴
