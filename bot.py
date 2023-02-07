@@ -187,7 +187,7 @@ async def yeni_mesaj(event: events.NewMessage.Event):
 
 @client.on(events.NewMessage(pattern='(?i)/dc+'))
 async def yeni_mesaj(event: events.NewMessage.Event):
-  if event.is_private:
+  if event.is_group:
     async for usr in client.iter_participants(event.chat_id):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
     await event.reply(f"salammmmm {ad}",
