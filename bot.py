@@ -51,7 +51,7 @@ async def id(event):
         if event.is_private:
             return await event.reply(f"**Sizin Telegram id:** `{user_id}`")
         else:
-            return await event.reply(f"**İstifadəçi id:** `{user_id}`\n**Qrup id:** `{chat_id}`\n**İSDİFADƏÇİ: [LİNK](tg://settings)")
+            return await event.reply(f"**👤 Sən**\n**🆔️ id:-** `{user_id}`\n**📎 link:-** [Toxun 👆](tg://settings)\n\n**👥 GRUP**\n**🆔️ id:-** `{chat_id}`")
           
   #----------------------------------------
 
