@@ -199,7 +199,7 @@ async def yeni_mesaj(event: events.NewMessage.Event):
   if event.is_private:
     async for usr in client.iter_participants(event.chat_id):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
-    await event.reply(f"salam {ad}")
+    await event.reply(f"salam {ad} aee")
 	
     
 @client.on(events.callbackquery.CallbackQuery(data="tema"))
