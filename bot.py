@@ -182,7 +182,8 @@ async def handler(event):
 @client.on(events.ChatAction)
 async def handler(event):
     if event.user_left:
-        await event.reply("Səni tanimaq gözəl idi 🙃")
+	ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
+        await event.reply(f"Səni tanimaq gözəl idi 🙃 {ad}")
 #---------------------------------------‐-----------------
 
 #    #######CHAT MESAJLAR⬇️  #########
