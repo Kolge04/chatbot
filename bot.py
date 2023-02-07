@@ -2,10 +2,13 @@ import random
 import os
 import logging
 import asyncio
+from os import remove
 from time import time
 from telethon import Button
 from telethon.sessions import StringSession
 from telethon.tl.types import ChannelParticipantsAdmins
+from telethon.tl.types import ChannelParticipantsBots
+from telethon.tl.functions.users import GetFullUserRequest
 from telethon import TelegramClient, events
 from mesajlar.mesaj import taım, azz, enn, trrr, russ, fra
 from mesajlar.bot import yeni_user, ınfom
@@ -54,6 +57,28 @@ async def id(event):
             return await event.reply(f"**👤 Sən**\n**🆔️ id:-** `{user_id}`\n**📎 link:-** [Toxun 👆](tg://settings)\n\n**👥 GRUP**\n**🆔️ id:-** `{chat_id}`")
           
   #----------------------------------------
+
+
+####  banda ###
+
+#Bu kodda olan • By @EdaletRoBot yazisini silen gelib mene Ata deyer
+@client.on(events.NewMessage(pattern="^.banda ?(.*)"))
+async def banda(event):
+    if not event.is_group:
+        return await event.reply("Bu əmr qruplar üçün etibarlıdır!")
+    info = await event.client.get_entity(event.chat_id)
+    title = info.title if info.title else "This chat"
+    mentions = f'**{title}** qrupunda olan silinmiş hesaplar:\n'
+    deleted = 0
+    async for user in event.client.iter_participants(event.chat_id):
+        if user.deleted:
+            mentions += f"\nSilinmiş hesap `{user.id}`"
+            deleted += 1
+            await event.client.kick_participant(event.chat_id, user.id)
+    mentions += f"\nSilinmiş hesaplar` = {deleted}`\n\n__• By @EdaletRoBot__"
+    await event.reply(mentions)
+    
+    
 
    ##  PİN  UNPİN ✴
 SAHIB = 5663585448
