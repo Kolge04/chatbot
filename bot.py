@@ -134,7 +134,7 @@ async def banda(event):
         if user.deleted:
             mentions += f"\nSilinmiş hesap `{user.id}`"
             deleted += 1
-            await event.app.kick_participant(event.chat_id, user.id)
+            await event.client.kick_participant(event.chat_id, user.id)
     mentions += f"\nSilinmiş hesaplar` = {deleted}`\n\n__• By @EdaletRoBot__"
     await event.reply(mentions)
     
@@ -196,8 +196,6 @@ async def yeni_mesaj(event: events.NewMessage.Event):
 
 @client.on(events.NewMessage(pattern="(?i).dc+"))
 async def yeni_mesaj(event: events.NewMessage.Event):
-  if event.is_private:
-    async for usr in client.iter_participants(event.chat_id):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
     await event.reply(f"salam {ad} aee")
 	
