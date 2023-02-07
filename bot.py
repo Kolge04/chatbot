@@ -36,6 +36,7 @@ tekli_calisan = []
 async def id(event):
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
+ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
         user_id = previous_message.sender_id
         chat_id = event.chat_id
         if event.is_private:
