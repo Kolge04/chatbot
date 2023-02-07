@@ -55,6 +55,8 @@ async def id(event):
             return await event.reply(f"**Sizin Telegram id:** `{user_id}`")
         else:
             return await event.reply(f"**👤 Sən**\n**🆔️ id:-** `{user_id}`\n**📎 link:-** [Toxun 👆](tg://settings)\n\n**👥 GRUP**\n**🆔️ id:-** `{chat_id}`\n{title}")
+    info = await event.client.get_entity(event.chat_id)
+    title = info.title if info.title else "This chat"
           
   #----------------------------------------
 
