@@ -195,7 +195,21 @@ async def dc(event):
     async for usr in client.iter_participants(event.chat_id):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
     await event.reply(f"salam {ad}")
-    
+	
+@client.on(events.NewMessage(pattern="^.dc ?(.*)"))
+async def dc(event):
+  global anlik_calisan
+  if event.is_private:
+    return await event.respond("**Bu əmr qurup və kan keçərlidi. ❗**")
+  
+  admins = []
+  async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
+    admins.append(admin.id)
+  if not event.sender_id in admins:
+    return await event.respond("**Bu əmr sadəcə adminlər istifadə edə bilər 〽️**")
+  
+
+
 @client.on(events.NewMessage(pattern='(?i)/ınfo+'))
 async def yeni_mesaj(event: events.NewMessage.Event):
     await event.reply(f"{random.choice(ınfom)}")
