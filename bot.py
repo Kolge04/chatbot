@@ -185,16 +185,6 @@ client_start = b"\x42\x6F\x74\x20\x42\x61\xC5\x9F\x6C\x61\x64\xC4\xB1\x6C\x64\xC
 async def yeni_mesaj(event: events.NewMessage.Event):
     await event.reply(f"{random.choice(ınfom)}")
 
-@client.on(events.NewMessage(pattern=('(?i)/dc+'))
-async def yeni_mesaj(event: events.NewMessage.Event):
-    await event.reply(f"salammmmm?",
-		      buttons=(
-			      
-                      [Button.inline("DPĞRULUQ ⭐", data="⭐")],      
-                      [Button.inline("CƏSARƏT 💪", data="💪")],
-	            ),
-		    link_preview=False
-		   )
 @client.on(events.callbackquery.CallbackQuery(data="tema"))
 async def yeni_mesaj(event: events.NewMessage.Event):
     await event.respond(f"{random.choice(taım)}",
