@@ -36,6 +36,7 @@ grup_sayi = []
 
 user_sayi = []
 
+anlik_calisan = []
 ######  START####
 
 @client.on(events.NewMessage(pattern="^/start$"))
