@@ -102,12 +102,9 @@ async def start(event):
 
 @client.on(events.callbackquery.CallbackQuery(data="stats"))
 async def handler(event):
-    await event.edit(f"📊 [𝕏𝔸𝕆𝕊 𝕋𝔸𝔾𝔾𝔼ℝ](https://t.me/XAOS_Tagbot) Un  İstatiskası\n\n📋 Toplam Qrup: `{len(grup_sayi)}`\n📈 Aktuv Qruplar: `{len(anlik_calisan)}`\n👤 İsdifadəçi Sayı: `{len(user_sayi)}`", buttons=(
+    await event.edit(f"📊 [𝕏𝔸𝕆𝕊 𝕋𝔸𝔾𝔾𝔼ℝ](https://t.me/XAOS_Tagbot) Un  İstatiskası\n\n📋 Toplam Qrup: `{len(grup_sayi)}`\n📈 Aktuv Qruplar: `{len(anlik_calisan)}`\n👤 İsdifadəçi Sayı: `{len(user_sayi)}`")
 	              
-                      [Button.inline("♻️ YENİLƏ", data="stats")],
-                    ), 
-                    link_preview=False)
-	      
+                     
 	    
 	                
 
