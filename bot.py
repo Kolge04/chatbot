@@ -92,7 +92,7 @@ async def handler(event):
 
 @client.on(events.NewMessage(pattern="^.stat ?(.*)"))
 async def start(event):
-  await event.reply(f"📊 [𝕏𝔸𝕆𝕊 𝕋𝔸𝔾𝔾𝔼ℝ](https://t.me/XAOS_Tagbot) İstatiska", buttons=(
+  await event.respond(f"📊 [𝕏𝔸𝕆𝕊 𝕋𝔸𝔾𝔾𝔼ℝ](https://t.me/XAOS_Tagbot) İstatiska", buttons=(
                       [
                        Button.inline("📊 İstatiska", data="stats")
                       ],
@@ -102,7 +102,7 @@ async def start(event):
 
 @client.on(events.callbackquery.CallbackQuery(data="stats"))
 async def handler(event):
-    await event.reply(f"📊 [𝕏𝔸𝕆𝕊 𝕋𝔸𝔾𝔾𝔼ℝ](https://t.me/XAOS_Tagbot) Un  İstatiskası\n\n📋 Toplam Qrup: `{len(grup_sayi)}`\n📈 Aktuv Qruplar: `{len(anlik_calisan)}`\n👤 İsdifadəçi Sayı: `{len(user_sayi)}`", buttons=(
+    await event.respond(f"📊 [𝕏𝔸𝕆𝕊 𝕋𝔸𝔾𝔾𝔼ℝ](https://t.me/XAOS_Tagbot) Un  İstatiskası\n\n📋 Toplam Qrup: `{len(grup_sayi)}`\n📈 Aktuv Qruplar: `{len(anlik_calisan)}`\n👤 İsdifadəçi Sayı: `{len(user_sayi)}`", buttons=(
 	                [
                          Button.inline("♻️ YENİLƏ", data="stats")
                         ],
