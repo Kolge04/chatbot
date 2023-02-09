@@ -223,7 +223,7 @@ async def yeni_mesaj(event: events.NewMessage.Event):
 
 @client.on(events.NewMessage(pattern='(?i)/tema+'))
 async def yeni_mesaj(event: events.NewMessage.Event):
-    await event.respond(f"{random.choice(taım)}",
+    await event.edit(f"{random.choice(taım)}",
 		      buttons=(
 			   
                       [Button.inline("♻️ DƏYİŞ", data="tema")],
