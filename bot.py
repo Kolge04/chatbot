@@ -265,7 +265,20 @@ async def mentionall(event):
     admins.append(admin.id)
   if not event.sender_id in admins:
     return await event.respond("**Bu əmr sadəcə adminlər istifadə edə bilər 〽️**")
+  if event.pattern_match.group(1):
+    mode = "text_on_cmd"
+    msg = event.pattern_match.group(1)
+  elif event.reply_to_msg_id:
+    mode = "text_on_reply"
+    msg = event.reply_to_msg_id
+    if msg == None:
+        return await event.respond("❌ Keçmiş Mesajlar Üçün Tağ Edə Bilmərəm..")
+  elif event.pattern_match.group(1) and event.reply_to_msg_id:
+    return await event.respond("❌ İstifadəçiləri Çağırmağım Üçün Bir Səbəb Yoxdur ")
+  else:
+    return await event.respond("🗣 İstifadəçiləri Tağ Edə Bilməyim Üçün Bir Səbəb Yazın...!")
   
+	
   if mode == "text_on_cmd":
     anlik_calisan.append(event.chat_id)
     usrnum = 0
