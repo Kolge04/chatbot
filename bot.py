@@ -30,6 +30,10 @@ anlik_calisan = []
 
 tekli_calisan = []
 
+anlik_calisan = []
+
+grup_sayi = []
+
 ######  START####
 
 @client.on(events.NewMessage(pattern="^/start$"))
@@ -83,10 +87,20 @@ async def handler(event):
                    
 
 
+@client.on(events.NewMessage(pattern="^/stst$"))
+async def start(event):
+  await event.reply(f"** @FearlessTaggerBot Stats**", buttons=(
+                      [
+                       Button.inline("Stats", data="stats")
+                      ],
+                    ),
+                    link_preview=False)
 
 
-
-
+@client.on(events.callbackquery.CallbackQuery(data="stats"))
+async def handler(event):
+    await event.edit(f"**@JasmineTaggerBot İstatistikleri **\n\nToplam Grup: `{len(grup_sayi)}`\nAnlık Çalışan Grup: `{len(anlik_calisan)}`")
+ 
 
 #---------------‐------------------‐-------
 
