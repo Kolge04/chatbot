@@ -270,14 +270,14 @@ asoz = (
 "Salam,xanım, necəsiniz? Allah sizə hərşey verib, bir mənim nömrəmdən başqa",
 "Salam xanım Nərimanovda qalıram burdan xoşunuza necə gələ bilərəm?", 
 "Xanım mən sizə gəlim sən anama gəlin gəl",
-"Dünyanın ən gözəl hissi sənin şəxsidə yazmaq bəhanəndi"
-"Gəl səninlə natural ədəd kimi olaq. Başlanğıcımız olsun, sonumuz olmasın🫀<3", 
-"Bir səs eşidirsən? Bu sənin üçün atan qəlbimin səsidir🫂",
-"Könlüm qəmi neylər dilin nəğmələr söylər təki mənə bircə kəlmə sevirəm de..", 
-"Yeni ilə son günlər qalıb 'Staliçni' salatı bir yerdə yeyib AzTv-yə baxarıq🫂", 
+"Dünyanın ən gözəl hissi sənin şəxsidə yazmaq bəhanəndi",
+"Gəl səninlə natural ədəd kimi olaq. Başlanğıcımız olsun, sonumuz olmasın",
+"Bir səs eşidirsən? Bu sənin üçün atan qəlbimin səsidir",
+"Könlüm qəmi neylər dilin nəğmələr söylər təki mənə bircə kəlmə sevirəm de..",
+"Yeni ilə son günlər qalıb 'Staliçni' salatı bir yerdə yeyib AzTv-yə baxarıq🫂",
 "Səni elə sevərəm ki, sənən başqa dünyada adam olub olmadığını yoxlayarsan", 
 "Şəxsidə 'Sizə sözüm var' bəhanəsi ilə yazıb qəlbinizə daxil ola bilərəm?", 
-"Yağış yağdı, Sən isə bal"
+"Yağış yağdı, Sən isə bal",
 "Bəzi insanlar yağışı hiss edər, digərləri isə sadəcə islanar",
 "Unutma; Hər gələn sevməz.. Və heç bir sevgili getməz",
 "Heç bir ruhun ağrısı sənin dərdindən az deyil",
