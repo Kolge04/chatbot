@@ -389,7 +389,7 @@ async def mentionall(event):
   if not event.sender_id in admins:
     return await event.reply("**Bu əmr sadəcə adminlər istifadə edə bilər 〽️**")
 	
-  if mode == "text_on_cmd":
+  if mode == "":
     anlik_calisan.append(event.chat_id)
     usrnum = 0
     usrtxt = ""
