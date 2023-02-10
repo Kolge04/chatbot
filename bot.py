@@ -388,7 +388,7 @@ async def mentionall(event):
     admins.append(admin.id)
   if not event.sender_id in admins:
     return await event.reply("**Bu əmr sadəcə adminlər istifadə edə bilər 〽️**")
-  if event.data_match.group(0):
+  if event.pattern_match.group(0):
     mode = "text_on_cmd"
     msg = event.pattern_match.group(0)
   elif event.reply_to_msg_id:
