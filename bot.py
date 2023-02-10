@@ -260,11 +260,153 @@ async def yeni_mesaj(event: events.NewMessage.Event):
 async def mentionall(event):
     await event.reply("🤔 **USERLƏRİ NECƏ TAG EDİM** ❓",
 		      buttons=(
-		      [Button.inline("🇦🇿 **AZƏRBAYCAN** CA", data="aze")],
-                      [Button.inline("🇹🇷 **TÜRKCƏ** CƏ", data="tr")],
+		      [Button.inline("🇦🇿 AZƏRBAYCAN CA", data="aze")],
+                      [Button.inline("🇹🇷 TÜRK CƏ", data="tr")],
                     ),
                     link_preview=False
 		   )
+
+
+asoz = (
+"Mən boşalan qədəhlərin deyil sənsizliyin sərxoşuyam.",
+"Dünyada gözəl qız çoxdu ama ən gözəli indi bu mesajı oxuyur :)", 
+"Salam,xanım, necəsiniz? Allah sizə hərşey verib, bir mənim nömrəmdən başqa🤠",
+ "Sənin Məni Üzdüyün Qədər Mən Səni Üzsəydim Yoxee Qiya Bilmərəm Ölüb Eliyərsən....♥️", 
+"Salam xanım neçə ilin oğrusuyam sizin kimi qəlb oğurluya bilməmişəm.🌚",
+"Dünyanı gözəl olduğu üçün deyil, içində sən olduğun üçün sevirəm💕", 
+"Elə bil sizi hardasa görmüşəm üzünüz çox tanışdı🤨", 
+"Böcəyim, gördün məni aşkım?🙈", 
+"Bu dünyaya 2 günəş artıqdır, sən gəl mənim günəşim ol🌞", 
+"Sən mənim ayuyemsən🙈", 
+"salam xanım. Mənə 10 ardıcıl rəqəm deyə bilərsiniz ki zəng etsəm sizin nömrəniz çıxsın..🙈", 
+"Gözünün rəngini bilməyə gəldim,Könlünün haqqını almağa gəldim, Sevgilin varmı, olmağa gəldim, Ürəyinə məzar aç, ölməyə gəldim..🤍", 
+"Ürəyi gözəl insanların ürəyində olmaq gözəldir məndə səninlə gözəlləşim...🌝", 
+"Sən belə bilməzsən, gülüşün məndə neçə bahar edər.🤩", 
+"Təki sən həmişə gül...Gül ki, ürəyinin gözəlliyi gülüşlərində görünsün...🥰", 
+"Mənə günəş lazım deyil sən mənə gül bəsdi✨", 
+"Hər zaman xoşbəxtliyin mənbəyini öyrən deyiblər, evinizin yeri hardadı😇", 
+"Məni corona yox sənin gözlərin məhv etdi🤤", 
+"Hər aslanın gönlünde yavru bir ceylan yatar benimde ceylanım sendin bebeğim🥰", 
+"Lanet olsun çok güzelsin😻", 
+"Bu həyatda sənin üçün önəmli iki şey var:Biri sağlıq biridə mən😋", 
+"Xanım gözüm səhərdən sizdə qalıb onu qaytara bilərsiz?👀", 
+"Salam xanım Nərimanovda qalıram burdan xoşunuza necə gələ bilərəm?💘", 
+"Xanım mən sizə gəlim sən anama gəlin👰🏻‍♀", 
+"Dünyanın ən gözəl hissi sənin şəxsidə yazmaq bəhanəndi🙈", 
+"Gəl səninlə natural ədəd kimi olaq. Başlanğıcımız olsun, sonumuz olmasın🫀<3", 
+"Bir səs eşidirsən? Bu sənin üçün atan qəlbimin səsidir🫂",
+"Könlüm qəmi neylər dilin nəğmələr söylər təki mənə bircə kəlmə sevirəm de..🌚❤️", 
+"Yeni ilə son günlər qalıb 'Staliçni' salatı bir yerdə yeyib AzTv-yə baxarıq🫂", 
+"Səni elə sevərəm ki, sənən başqa dünyada adam olub olmadığını yoxlayarsan👑", 
+"Şəxsidə 'Sizə sözüm var' bəhanəsi ilə yazıb qəlbinizə daxil ola bilərəm?😃", 
+"Yağış yağdı, Sən isə bal🍯"
+"Bəzi insanlar yağışı hiss edər, digərləri isə sadəcə islanar",
+"Unutma; Hər gələn sevməz.. Və heç bir sevgili getməz",
+"Heç bir ruhun ağrısı sənin dərdindən az deyil",
+"Mən hər şeyi sınayıram; amma bacardığımı edirəm.",
+"Sevgi bir qadının həyatının bütün hekayəsidir və bir kişinin yeganə macərasıdır.",
+"Xoşbəxtlik ilk növbədə bədən sağlamlığındadır.",
+"Nə qədər yaşadığımız deyil, necə yaşadığımızdır",
+"Yer göy qurşağı, ağıl prizma, varlıq isə ağ şüadır.",
+"Hara getdiyinizi bilmirsinizsə, hansı tərəfə getdiyinizin əhəmiyyəti yoxdur.",
+"Həyatın ən qiymətli vaxtıdır. Kimə hədiyyə etdiyinizə diqqət edin.",
+"Evin bütün pəncərələrini sındırıb, sonra qapını döyə bilməzsən.",
+"Xoşbəxtlik yaşadığın həyat tərzində deyil, həyata baxış tərzindədir.",
+"Unutma; Hər gələn sevməz.. Və heç bir sevgili getməz.",
+"Bu həyatda yarım nəfəs. Sevgidən başqa heç nə planlaşdırma...",
+"Hər kəsə içindəki yaxşılar qədər yaxşı bir həyat arzulayıram.",
+"Gözəlliyi gözəl edən ədəbdir, ədəb isə gözəlliyi sevmək üçün səbəbdir!",
+"Qızılgülün ətri qızılgül verənin əlində qalır",
+"Axtardığın şey səni axtarandır.",
+"Hətta bir quş da göydə qanad çırpar.",
+"Könül almağı bilməyənlərə həyat əmanət deyil.",
+"Dürüst olmaqdan qorxma, ən çox itirəcəyiniz yanlış insanlar olacaq.",
+"İnsan ağac deyil, qırılanda səs çıxararsan.",
+"Öyrənmək həyatın yeganə sübutudur.",
+"Dünya əhalisi artdıqca insanların sayı azalır.",
+"Layiq olmadığını düşündüyünüz insanlara əsla həqiqəti deməyin.",
+"Çox şükür ki, göy hələ heç bir pul kisəsinə sığmır.",
+"Özün ol. Artıq hamı götürüb.",
+"Zərər çəkdim, boğazımdakı düyünləri uddum.",
+"O qədər gözəl gülümsəyirdi ki, sevməsəydim boşuna olardı.",
+"Onun sevdiyi men deyilem. Bunun ağrısını sizə deyə bilmərəm.",
+"Onun sevdiyi men deyilem. Bunun ağrısını sizə deyə bilmərəm.",
+"Zamanla hər şeyə alışırsan, amma bitmir.",
+"Əgər həqiqəti deyirsənsə, heç nəyi xatırlamağa ehtiyac yoxdur.",
+"Həqiqəti ilk söyləyən siz olun... Əks halda kimsə sizin yerinizə mütləq həqiqəti söyləyəcək.",
+"Kişilər daha güclü ola bilər, amma qadınlar dözümlüdürlər.",
+"Ağrı üçün heç bir resept yoxdur",
+"Ardınca getməyə cəsarətiniz varsa, bütün arzular gerçəkləşə bilər.",
+"Bu gizli sevgidir, heç kimə dərdlərimi deyə bilmərəm.",
+"Sizcə sevgi hər şeyi bağışlayır?",
+"Mənə də, sənə də siqaret lazımdır",
+"Mən səndən xüsusi birini tanımırdım",
+"Bir gün sevgi bitər, xatirələr qalır",
+"Sevmək nə qədər uzun bir sözdür!",
+"Hatırladığım en unutulası şeysin.",
+"Birlikdə gülmək üçün darıxdığım insanlar var.",
+"Xoşbəxtliyi səndə tapan sənindir, üstəlik qonaq.",
+"Çox sev, amma bəyənmirsənsə məcbur etmə!",
+"O qədər gözəl gülürdü ki, sevməsəm ziyan olacaqdı.",
+"və insan insana yoldaş olmalı yaralarını sağalatmalı",
+"Məzarlıq, əsəb uğruna peşman olanlarla dolu",
+"Eşq külək kimidir görməzsən ama hiss edə bilərsən.",
+"tərəzi var ölçü var , hərşeyin bir vaxtı var",
+"Yanıltmasın səni masum baxışlar, bəzılarını şeytan ayaqdə alqışlar...",
+"həyat sabahı gözləyəcək qədər uzun deyil",
+"Yaxşılar əsla itirməz , itirilir.",
+"görməzden gəldiyin sevgiyə möhtac qalman diləyiylə",
+"Kaşki ağıl vermək yerinə hüzur versəniz",
+"Heç bilmədiyim o qoxunu çox özləyirəm",
+"𝑌𝑎𝑥𝑠‌𝚤 𝑜𝑙𝑎𝑛 𝑖𝑡𝑖𝑟𝑠𝑒𝑑𝑒 𝑞𝑎𝑧𝑎𝑛ı𝑟",
+"𝐴ş𝑖𝑞 𝑜𝑙𝑚𝑎𝑞 𝑔𝑜‌𝑧ə𝑙 𝑏𝑖𝑟 ş𝑒𝑦 𝑎𝑚𝑎 𝑠𝑎𝑑ə𝑐ə 𝑠ənə",
+"𝐻𝑒𝑐‌𝑘𝑖𝑚 ℎ𝑒𝑐‌𝑘𝑖𝑚𝑖 𝑖𝑡𝑖𝑟𝑚𝑒𝑧 𝑔𝑖𝑑ə𝑛 𝑏𝑎ş𝑞𝑎𝑠ı𝑛ı 𝑡𝑎𝑝𝑎𝑟, 𝑞𝑎𝑙𝑎𝑛 𝑜‌𝑧𝑢‌𝑛𝑢‌",
+"Ç𝑜𝑥 ö𝑛ə𝑚𝑠ə𝑑𝑖𝑘 𝑖şə 𝑦𝑎𝑟𝑎𝑚𝑎𝑑ı 𝑎𝑟𝑡𝚤𝑞 𝑏𝑜ş𝑣𝑒𝑟𝑖𝑟𝑖𝑘",
+"Ö𝑚𝑟ü𝑛ü𝑧ü 𝑠𝑢𝑠𝑑𝑢𝑞𝑙𝑎𝑟𝚤𝑛𝚤𝑧𝚤 𝑒𝑠‌𝑖𝑑𝑒𝑛 𝑏𝑖𝑟𝑖𝑦𝑙ə 𝑘𝑒ç𝑖𝑟𝑖𝑛",
+"𝐺ö𝑛𝑙ü𝑛ü𝑧ə 𝑎𝑙𝑑ığı𝑛ı𝑧 𝑔ö𝑛𝑙ü𝑛ü𝑧ü 𝑎𝑙𝑚𝑎𝑔‌ı 𝑏𝑖𝑙𝑠𝑖𝑛",
+"𝑆ə𝑛 ç𝑜𝑥 𝑠𝑒𝑣 𝑑𝑒 𝑏𝑢𝑟𝑎𝑥ı𝑏 𝑔𝑖𝑑ə𝑛 𝑦𝑎𝑟 𝑢𝑡𝑎𝑛𝑠ı𝑛",
+"𝑌𝑎𝑥𝑠‌𝚤 𝑜𝑙𝑎𝑛 𝑖𝑡𝑖𝑟𝑠ə𝑑ə 𝑞𝑎𝑧𝑎𝑛ı𝑟",
+"𝑆𝑎𝑣𝑎ş𝑚𝑎𝑦ı 𝑏𝑢𝑟𝑎𝑥𝚤𝑟𝑎𝑚 𝑏𝑢𝑛𝑢 𝑣𝑒𝑑𝑎 𝑠𝑎𝑦",
+"𝑁ə 𝑖ç𝑖𝑚𝑑ə𝑘𝑖 𝑘𝑢‌𝑐‌ə𝑙ə𝑟ə 𝑠ığ𝑎𝑏𝑖𝑙𝑑𝑖𝑚 𝑁ə 𝑑ə 𝑐‌𝑜‌𝑙𝑑ə𝑘𝑖 𝑑ü𝑛𝑦𝑎𝑦𝑎", 
+"𝐴𝑟𝑡ı𝑞 ℎ𝑒ç𝑏𝑖𝑟 ş𝑒𝑦 ə𝑣𝑣ə𝑙𝑘𝑖 𝑘𝑖𝑚𝑖 𝑑𝑒𝑦𝑖𝑙 𝐵𝑢𝑛𝑎 𝑚ə𝑛𝑑ə 𝑑𝑎𝑥𝑖𝑙ə𝑚", 
+"𝐴ş𝑖𝑞 𝑜𝑙𝑚𝑎𝑞 𝑔𝑜‌𝑧𝑒𝑙 𝑏𝑖𝑟 ş𝑒𝑦 𝑎𝑚𝑎 𝑠𝑎𝑑ə𝑐ə 𝑠ə𝑛ə", 
+"İ𝑛𝑠𝑎𝑛 𝑎𝑛𝑙𝑎𝑑ığı 𝑣𝑒 𝑎𝑛𝑙𝑎şı𝑙𝑑ığı 𝑖𝑛𝑠𝑎𝑛𝑑𝑎 ç𝑖çə𝑘 𝑎ç𝑎𝑟",
+"𝑌𝑎𝑥𝑠‌𝚤𝑦𝑎𝑚 𝑑𝑒𝑠ə𝑚 𝑖𝑛𝑎𝑛𝑎𝑐𝑎𝑞, 𝑜 𝑘ə𝑑ə𝑟 𝑥ə𝑏ə𝑟𝑠𝑖𝑧 𝑚ə𝑛𝑑ə𝑛", 
+"𝐸𝑙ə 𝑔𝑜‌𝑧ə𝑙 𝑏𝑎𝑥𝑡ı 𝑘𝑖 𝑞ə𝑙𝑏𝑖 𝑑ə 𝑔ü𝑙üşü 𝑞ə𝑑ə𝑟 𝑔𝑜‌𝑧ə𝑙 𝑠𝑎𝑛𝑚ış𝑡ı𝑚",
+"𝑀ə𝑠𝑎𝑓ə𝑙ə𝑟 𝑈𝑚𝑟𝑢𝑚𝑑𝑎 𝐷𝑒𝑦𝑖𝑙, İç𝑖𝑚𝑑ə 𝐸𝑛 𝐺ü𝑧ə𝑙 𝑌𝑒𝑟𝑑ə𝑠ə𝑛",
+"İ𝑛𝑠𝑎𝑛 𝑏ə𝑧ə𝑛 𝑏𝑜‌𝑦ü𝑘 𝑥ə𝑦𝑎𝑙𝑙𝑎𝑟𝚤𝑛𝚤 𝑘𝑖ç𝑖𝑘 𝑖𝑛𝑠𝑎𝑛𝑙𝑎𝑟𝑙𝑎 𝑧𝑖𝑦𝑎𝑛 𝑒𝑑ə𝑟",
+"𝐻𝑒𝑐‌𝑘𝑖𝑚 ℎ𝑒𝑐‌𝑘𝑖𝑚𝑖 𝑖𝑡𝑖𝑟𝑚ə𝑧 𝑔𝑒𝑑ə𝑛 𝑏𝑎ş𝑞𝑎𝑠ı𝑛ı 𝑡𝑎𝑝𝑎𝑟 𝑞𝑎𝑙𝑎𝑛 𝑜‌𝑧𝑢‌𝑛𝑢‌",
+"Ç𝑜𝑥 ö𝑛ə𝑚𝑠ə𝑑𝑖𝑘 𝑖şə 𝑦𝑎𝑟𝑎𝑚𝑎𝑑ı 𝑎𝑟𝑡ı𝑞 𝑏𝑜ş𝑣𝑒𝑟𝑖𝑟𝑖𝑘", 
+"𝐵𝑖𝑟 ç𝑖ç𝑒𝑘𝑙𝑒 𝑔ü𝑙𝑒𝑟 𝑞𝑎𝑑ı𝑛 𝑏𝑖𝑟 𝑙𝑎𝑓𝑙𝑎 ℎü𝑧ü𝑛",
+"𝐻ə𝑟 ş𝑒𝑦𝑖 𝑏𝑖𝑙ə𝑛 𝑑𝑒𝑦𝑖𝑙 𝑞ı𝑦𝑚ə𝑡 𝑏𝑖𝑙ə𝑛 𝑖𝑛𝑠𝑎𝑛𝑙𝑎𝑟 𝑜𝑙𝑠𝑢𝑛 ℎə𝑦𝑎𝑡ı𝑛ı𝑧𝑑𝑎",
+"𝑉𝑒𝑟𝑖𝑙ə𝑛 𝑑ə𝑦ə𝑟𝑖𝑛 𝑛𝑎𝑛𝑘𝑜𝑟𝑢 𝑜𝑙𝑚𝑎𝑦ı𝑛 𝑔𝑒𝑟𝑖𝑠𝑖 ℎə𝑙𝑙𝑜𝑙𝑢𝑟",
+"𝑀ə𝑠𝑎𝑓ə 𝑖𝑦𝑖𝑑𝑖𝑟 𝑁ə ℎə𝑑𝑑𝑖𝑛𝑖 𝑎ş𝑎𝑛 𝑜𝑙𝑢𝑟 𝑛ə 𝑑ə 𝑐𝑎𝑛ı𝑛ı 𝑠ı𝑥𝑎𝑛", 
+"𝐻ə𝑦𝑎𝑡 𝑖rəl𝑖𝑦ə 𝑏𝑎𝑥ı𝑙𝑎𝑟𝑎𝑞 𝑦𝑎ş𝑎𝑛ı𝑟 𝑔𝑒𝑟𝑖𝑦ə 𝑏𝑎𝑥𝑎𝑟𝑎𝑞 𝑎𝑛𝑙𝑎şı𝑙ı𝑟",
+"𝑆ə𝑛 ç𝑜𝑥 𝑠𝑒𝑣 , 𝑔𝑒𝑑ə𝑛 𝑦𝑎𝑟 𝑢𝑡𝑎𝑛𝑠ı𝑛",
+"𝐵𝑖𝑟 𝑀𝑜‌𝑐𝑢‌𝑧ə𝑦ə 𝐸ℎ𝑡𝑖𝑦𝑎𝑐ı𝑚 𝑉𝑎𝑟 𝑖𝑑𝑖 𝐻ə𝑦𝑎𝑡 𝑆ə𝑛𝑖 𝑄𝑎𝑟şı𝑚𝑎 Çı𝑥𝑎𝑟𝑑ı",
+"İ𝑛𝑠𝑎𝑛 𝑎𝑛𝑙𝑎𝑑ığı 𝑣ə 𝑎𝑛𝑙𝑎şı𝑙𝑑ığı 𝑖𝑛𝑠𝑎𝑛𝑑𝑎 ç𝑖çə𝑘 𝑎ç𝑎𝑟",
+"𝑢‌𝑟ə𝑦𝑖𝑚𝑖𝑛 𝑡𝑎𝑚 𝑜𝑟𝑡𝑎𝑠ı𝑛𝑑𝑎 𝑏𝑜‌𝑦ü𝑘 𝑏𝑖𝑟 𝑦𝑜𝑟𝑔‌𝑢𝑛𝑙𝑢𝑞 𝑣𝑎𝑟",
+"𝑄ə𝑙𝑏𝑖 𝑔𝑜‌𝑧ə𝑙 𝑜𝑙𝑎𝑛ı𝑛 𝑔ö𝑧ü𝑛𝑑ə𝑛 𝑦𝑎ş ə𝑘𝑠𝑖𝑘 𝑜𝑙𝑚𝑎𝑧𝑚ış",
+"𝐻ə𝑟 ş𝑒𝑦𝑖𝑛 𝑏𝑖𝑡𝑑𝑖𝑦𝑖 𝑦𝑒𝑟𝑑ə 𝑚ə𝑛𝑑ə 𝑏𝑖𝑡𝑑𝑖𝑚 𝑑ə𝑦𝑖ş𝑑𝑖𝑛 𝑑𝑒𝑦ə𝑛𝑙ə𝑟𝑖𝑛 ə𝑠ə𝑟𝑖𝑦ə𝑚",
+"𝐺ü𝑣ə𝑛𝑚ə𝑘 𝑠𝑒𝑣𝑚ə𝑘𝑑ə𝑛 𝑑𝑎ℎ𝑎 𝑑ə𝑦ə𝑟𝑙𝑖, 𝑍𝑎𝑚𝑎𝑛𝑙𝑎 𝑎𝑛𝑙𝑎𝑟𝑠ı𝑛",
+"İ𝑛ş𝑎𝑙𝑙𝑎ℎ 𝑠ə𝑏𝑟𝑙ə 𝑔𝑜‌𝑧𝑙ə𝑑𝑖𝑦𝑖𝑛 ℎ𝑒𝑟 ş𝑒𝑦 𝑢‌𝑐‌𝑢‌𝑛 𝑥𝑒𝑦𝑖𝑟𝑙𝑖 𝑏𝑖𝑟 𝑥ə𝑏ə𝑟 𝑎𝑙ı𝑟𝑠ı𝑛",
+"İ𝑛𝑠𝑎𝑛 𝑏ə𝑧ə𝑛 𝑏𝑜‌𝑦𝑢‌𝑘 𝑥ə𝑦𝑎𝑙𝑙𝑎𝑟𝚤𝑛𝚤 𝑘𝑖𝑐‌𝑖𝑘 𝑖𝑛𝑠𝑎𝑛𝑙𝑎𝑟𝑙𝑎 𝑧𝑖𝑦𝑎𝑛 𝑒𝑑ə𝑟 ",
+"Ö𝑙𝑚ə𝑘 𝐵𝑖𝑟 ş𝑒𝑦 𝑑𝑒y𝑖𝑙 𝑦𝑎ş𝑎𝑚𝑎𝑚𝑎𝑞 𝑞𝑜𝑟𝑥𝑢𝑛𝑐",
+"𝐻ə𝑟𝑘ə𝑠𝑖𝑛 𝑏𝑖𝑟 𝑘𝑒ç𝑚𝑖ş𝑖 𝑣𝑎𝑟, 𝐵𝑖𝑟𝑑ə 𝑣𝑎𝑧𝑔𝑒ç𝑚𝑖ş𝑖",
+"𝐺ü𝑐𝑙ü 𝑔ö𝑟ü𝑛ə 𝑏𝑖𝑙ə𝑟ə𝑚 𝑎𝑚𝑎 𝑖𝑛𝑎𝑛 𝑦𝑜𝑟𝑔‌𝑢𝑛𝑎𝑚",
+"𝐻ə𝑦𝑎𝑡 𝑛ə 𝑔𝑒𝑑ə𝑛𝑖 𝑔𝑒𝑟𝑖 𝑔ə𝑡𝑖𝑟𝑖𝑟 𝑛ə𝑑ə 𝑖𝑡𝑖𝑟𝑑𝑖𝑦𝑖𝑛𝑖𝑧 𝑧𝑎𝑚𝑎𝑛ı 𝑔𝑒𝑟𝑖 𝑔ə𝑡𝑖𝑟𝑖𝑟", 
+"𝐸𝑘𝑚𝑒𝑘 𝑝𝑎ℎ𝑎𝑙ı 𝑒𝑚𝑒𝑘 𝑢𝑐𝑢𝑧𝑑𝑢."
+)
+	
+
+
+
+
+
+
+
+
+
 	
 sehidler = "Qəzənfər Nəcəf Nurlan İnqilab Nicat Mirnəbi Məhəmməd Ramazan Telman Fazil Qələndər Nofəl İbrahim Habil Elşən Sabir Həsən Qər󠁧󠁢󠁷󠁬󠁳󠁿󠁧󠁢󠁷󠁬󠁳󠁿ib Ceyhun Mübariz Polad Cəbrayıl ".split(" ")
 
