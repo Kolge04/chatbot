@@ -271,7 +271,7 @@ asoz = (
 "Mən boşalan qədəhlərin deyil sənsizliyin sərxoşuyam.",
 "Dünyada gözəl qız çoxdu ama ən gözəli indi bu mesajı oxuyur", 
 "Salam,xanım, necəsiniz? Allah sizə hərşey verib, bir mənim nömrəmdən başqa🤠",
- "Sənin Məni Üzdüyün Qədər Mən Səni Üzsəydim Yoxee Qiya Bilmərəm Ölüb Eliyərsən....♥️", 
+"Sənin Məni Üzdüyün Qədər Mən Səni Üzsəydim Yoxee Qiya Bilmərəm Ölüb Eliyərsən....♥️", 
 "Salam xanım neçə ilin oğrusuyam sizin kimi qəlb oğurluya bilməmişəm.🌚",
 "Dünyanı gözəl olduğu üçün deyil, içində sən olduğun üçün sevirəm💕", 
 "Elə bil sizi hardasa görmüşəm üzünüz çox tanışdı🤨", 
