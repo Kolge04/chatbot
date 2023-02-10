@@ -270,19 +270,6 @@ async def mentionall(event):
 asoz = (
 "Mən boşalan qədəhlərin deyil sənsizliyin sərxoşuyam.",
 "Salam,xanım, necəsiniz? Allah sizə hərşey verib, bir mənim nömrəmdən başqa🤠",
-"Sənin Məni Üzdüyün Qədər Mən Səni Üzsəydim Yoxee Qiya Bilmərəm Ölüb Eliyərsən....♥️", 
-"Salam xanım neçə ilin oğrusuyam sizin kimi qəlb oğurluya bilməmişəm.🌚",
-"Dünyanı gözəl olduğu üçün deyil, içində sən olduğun üçün sevirəm💕", 
-"Elə bil sizi hardasa görmüşəm üzünüz çox tanışdı🤨", 
-"Böcəyim, gördün məni aşkım?🙈", 
-"Bu dünyaya 2 günəş artıqdır, sən gəl mənim günəşim ol🌞", 
-"Sən mənim ayuyemsən🙈", 
-"salam xanım. Mənə 10 ardıcıl rəqəm deyə bilərsiniz ki zəng etsəm sizin nömrəniz çıxsın..🙈", 
-"Gözünün rəngini bilməyə gəldim,Könlünün haqqını almağa gəldim, Sevgilin varmı, olmağa gəldim, Ürəyinə məzar aç, ölməyə gəldim..🤍", 
-"Ürəyi gözəl insanların ürəyində olmaq gözəldir məndə səninlə gözəlləşim...🌝", 
-"Sən belə bilməzsən, gülüşün məndə neçə bahar edər.🤩", 
-"Təki sən həmişə gül...Gül ki, ürəyinin gözəlliyi gülüşlərində görünsün...🥰", 
-"Mənə günəş lazım deyil sən mənə gül bəsdi✨", 
 "Hər zaman xoşbəxtliyin mənbəyini öyrən deyiblər, evinizin yeri hardadı😇", 
 "Məni corona yox sənin gözlərin məhv etdi🤤", 
 "Hər aslanın gönlünde yavru bir ceylan yatar benimde ceylanım sendin bebeğim🥰", 
