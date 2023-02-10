@@ -258,9 +258,13 @@ async def yeni_mesaj(event: events.NewMessage.Event):
 ######    TAĞ MODULU⬇️   #########  
 @client.on(events.NewMessage(pattern="^.stag ?(.*)"))
 async def mentionall(event):
-    await event.respond("ha ha")
-	
-
+    await event.reply("🤔 **USERLƏRİ NECƏ TAG EDİM** ❓",
+		      buttons=(
+		      [Button.inline("🇦🇿 **AZƏRBAYCAN** CA", data="aze")],
+                      [Button.inline("🇹🇷 **TÜRKCƏ** CƏ", data="tr")],
+                    ),
+                    link_preview=False
+		   )
 	
 sehidler = "Qəzənfər Nəcəf Nurlan İnqilab Nicat Mirnəbi Məhəmməd Ramazan Telman Fazil Qələndər Nofəl İbrahim Habil Elşən Sabir Həsən Qər󠁧󠁢󠁷󠁬󠁳󠁿󠁧󠁢󠁷󠁬󠁳󠁿ib Ceyhun Mübariz Polad Cəbrayıl ".split(" ")
 
