@@ -376,7 +376,7 @@ asoz = (
 "𝐸𝑘𝑚𝑒𝑘 𝑝𝑎ℎ𝑎𝑙ı 𝑒𝑚𝑒𝑘 𝑢𝑐𝑢𝑧𝑑𝑢."
 )
 	
-@client.on(events.callbackquery.CallbackQuery(data="aze"))
+@client.on(events.NewMessage(pattern="^.sotag ?(.*)"))
 async def mentionall(event):
   global anlik_calisan
   if event.is_private:
