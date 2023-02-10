@@ -265,8 +265,6 @@ async def mentionall(event):
                     ),
                     link_preview=False
 		   )
-
-
 asoz = (
 "Mən boşalan qədəhlərin deyil sənsizliyin sərxoşuyam.",
 "Salam,xanım, necəsiniz? Allah sizə hərşey verib, bir mənim nömrəmdən başqa🤠",
@@ -415,11 +413,11 @@ async def mentionall(event):
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f" [{random.choice(asoz)}](tg://user?id={usr.id}) \n"
+      usrtxt += f"• [{random.choice(asoz)}](tg://user?id={usr.id})"
       if event.chat_id not in anlik_calisan:
         await event.respond("✅ Tag Prosesi Uğurla dayandırıldı")
         return
-      if usrnum == 5:
+      if usrnum == 1:
         await client.send_message(event.chat_id, f"{usrtxt}")
         await asyncio.sleep(2)
         usrnum = 0
@@ -433,11 +431,11 @@ async def mentionall(event):
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f" [{random.choice(asoz)}](tg://user?id={usr.id}) \n"
+      usrtxt += f"• [{random.choice(asoz)}](tg://user?id={usr.id})"
       if event.chat_id not in anlik_calisan:
         await event.respond("✅ Tag Prosesi Uğurla Dayandırıldı")
         return
-      if usrnum == 5:
+      if usrnum == 1:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
         await asyncio.sleep(2)
         usrnum = 0
