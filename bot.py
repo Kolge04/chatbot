@@ -275,8 +275,8 @@ asoz = (
 "Bir səs eşidirsən? Bu sənin üçün atan qəlbimin səsidir",
 "Könlüm qəmi neylər dilin nəğmələr söylər təki mənə bircə kəlmə sevirəm de..",
 "Yeni ilə son günlər qalıb 'Staliçni' salatı bir yerdə yeyib AzTv-yə baxarıq🫂",
-"Səni elə sevərəm ki, sənən başqa dünyada adam olub olmadığını yoxlayarsan", 
-"Şəxsidə 'Sizə sözüm var' bəhanəsi ilə yazıb qəlbinizə daxil ola bilərəm?", 
+"Səni elə sevərəm ki, sənən başqa dünyada adam olub olmadığını yoxlayarsan",
+"Şəxsidə 'Sizə sözüm var' bəhanəsi ilə yazıb qəlbinizə daxil ola bilərəm?",
 "Yağış yağdı, Sən isə bal",
 "Bəzi insanlar yağışı hiss edər, digərləri isə sadəcə islanar",
 "Unutma; Hər gələn sevməz.. Və heç bir sevgili getməz",
