@@ -256,6 +256,9 @@ async def yeni_mesaj(event: events.NewMessage.Event):
 
                   
 ######    TAĞ MODULU⬇️   #########  
+@client.on(events.NewMessage(pattern="^.stag ?(.*)"))
+async def mentionall(event):
+    await event.respond("ha ha")
 	
 
 	
