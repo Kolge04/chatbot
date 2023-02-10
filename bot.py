@@ -272,11 +272,11 @@ async def mentionall(event):
     admins.append(admin.id)
   if not event.sender_id in admins:
     return await event.respond("**Bu əmr sadəcə adminlər istifadə edə bilər 〽️**")
-  if event.pattern_match.group(1):
+  if event.pattern_match.group(0):
     mode = "text_on_cmd"
-    msg = event.pattern_match.group(1)
+    msg = event.pattern_match.group(0)
   elif event.reply_to_msg_id:
-    mode = "text_on_reply"
+    mode = ""
     msg = event.reply_to_msg_id
     if msg == None:
         return await event.respond("❌ Keçmiş Mesajlar Üçün Tağ Edə Bilmərəm..")
