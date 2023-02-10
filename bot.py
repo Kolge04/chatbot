@@ -388,9 +388,6 @@ async def mentionall(event):
     admins.append(admin.id)
   if not event.sender_id in admins:
     return await event.reply("**Bu əmr sadəcə adminlər istifadə edə bilər 〽️**")
-  if event.pattern_match.button(0):
-    mode = "text_on_cmd"
-    msg = event.pattern_match.group(0)
   elif event.reply_to_msg_id:
     mode = ""
     msg = event.reply_to_msg_id
@@ -413,7 +410,7 @@ async def mentionall(event):
         await event.reply("✅ Tag Prosesi Uğurla dayandırıldı")
         return
       if usrnum == 1:
-        await client.send_message(event.chat_id, f"{usrtxt}")
+        await client.send_message(event.chat_id, f"{usrtxt}\n")
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
@@ -481,7 +478,7 @@ async def mentionall(event):
         await event.respond("✅ Tag Prosesi Uğurla dayandırıldı")
         return
       if usrnum == 5:
-        await client.send_message(event.chat_id, f"{usrtxt}")
+        await client.send_message(event.chat_id, f"{usrtxt}\n")
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
