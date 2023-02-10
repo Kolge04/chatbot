@@ -387,8 +387,8 @@ async def mentionall(event):
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
   if not event.sender_id in admins:
-    return await event.respond("**Bu əmr sadəcə adminlər istifadə edə bilər 〽️**")
-  if event.pattern_match.group(1):
+    return await event.reply("**Bu əmr sadəcə adminlər istifadə edə bilər 〽️**")
+  if event.data_match.group(0):
     mode = "text_on_cmd"
     msg = event.pattern_match.group(0)
   elif event.reply_to_msg_id:
@@ -399,7 +399,7 @@ async def mentionall(event):
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
     return await event.respond("❌ İstifadəçiləri Çağırmağım Üçün Bir Səbəb Yoxdur ")
   else:
-    return await event.respond("🗣 İstifadəçiləri Tağ Edə Bilməyim Üçün Bir Səbəb Yazın...!")
+    return await event.reply("🗣 İstifadəçiləri Tağ Edə Bilməyim Üçün Bir Səbəb Yazın...!")
   
 	
   if mode == "text_on_cmd":
@@ -410,7 +410,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"• [{random.choice(asoz)}](tg://user?id={usr.id})"
       if event.chat_id not in anlik_calisan:
-        await event.respond("✅ Tag Prosesi Uğurla dayandırıldı")
+        await event.reply("✅ Tag Prosesi Uğurla dayandırıldı")
         return
       if usrnum == 1:
         await client.send_message(event.chat_id, f"{usrtxt}")
