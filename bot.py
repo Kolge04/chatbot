@@ -134,7 +134,7 @@ async def id(event):
         if event.is_private:
             return await event.reply(f"**🆔️ id:** `{user_id}`\n**📎 link:-** [Toxun 👆](tg://settings)")
         else:
-            return await event.reply(f"**👤 Sən**\n**🆔️ id:-** `{user_id}`\n**📎 link:-** [Toxun 👆](tg://settings)\n\n**👥 GRUP**\n**🆔️ id:** `{chat_id}`")
+            return await event.reply(f"**👤 Sən**\n**🆔️ id:-** `{user_id}`\n**📎 link:-** [Toxun 👆](tg://settings)\n\n**👥 GRUP**\n**🆔️ İd:** `{chat_id}`")
     
   #----------------------------------------
 
@@ -388,11 +388,7 @@ async def mentionall(event):
     admins.append(admin.id)
   if not event.sender_id in admins:
     return await event.reply("**Bu əmr sadəcə adminlər istifadə edə bilər 〽️**")
-  elif event.reply_to_msg_id:
-    mode = ""
-    msg = event.reply_to_msg_id
-    if msg == None:
-        return await event.respond("❌ Keçmiş Mesajlar Üçün Tağ Edə Bilmərəm..")
+  
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
     return await event.respond("❌ İstifadəçiləri Çağırmağım Üçün Bir Səbəb Yoxdur ")
   else:
