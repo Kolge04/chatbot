@@ -388,12 +388,6 @@ async def mentionall(event):
     admins.append(admin.id)
   if not event.sender_id in admins:
     return await event.reply("**Bu əmr sadəcə adminlər istifadə edə bilər 〽️**")
-  
-  elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("❌ İstifadəçiləri Çağırmağım Üçün Bir Səbəb Yoxdur ")
-  else:
-    return await event.reply("🗣 İstifadəçiləri Tağ Edə Bilməyim Üçün Bir Səbəb Yazın...!")
-  
 	
   if mode == "text_on_cmd":
     anlik_calisan.append(event.chat_id)
