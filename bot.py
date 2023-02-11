@@ -376,8 +376,7 @@ asoz = (
 "𝐸𝑘𝑚𝑒𝑘 𝑝𝑎ℎ𝑎𝑙ı 𝑒𝑚𝑒𝑘 𝑢𝑐𝑢𝑧𝑑𝑢."
 )
 
-@client.on(events.callbackquery.CallbackQuery(data="aze"))
-@client.on(events.NewMessage(pattern="^.soztag ?(.*)"))
+@client.on(events.NewMessage(pattern="^.stag ?(.*)"))
 async def mentionall(event):
   global anlik_calisan
   if event.is_private:
@@ -387,19 +386,32 @@ async def mentionall(event):
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
   if not event.sender_id in admins:
-    return await event.reply("**Bu əmr sadəcə adminlər istifadə edə bilər 〽️**")
+    return await event.respond("**Bu əmr sadəcə adminlər istifadə edə bilər 〽️**")
+  if event.pattern_match.group(0):
+    mode = "text_on_cmd"
+    msg = event.pattern_match.group(0)
+  elif event.reply_to_msg_id:
+    mode = ""
+    msg = event.reply_to_msg_id
+    if msg == None:
+        return await event.respond("❌ Keçmiş Mesajlar Üçün Tağ Edə Bilmərəm..")
+  elif event.pattern_match.group(1) and event.reply_to_msg_id:
+    return await event.respond("❌ İstifadəçiləri Çağırmağım Üçün Bir Səbəb Yoxdur ")
+  else:
+    return await event.respond("🗣 İstifadəçiləri Tağ Edə Bilməyim Üçün Bir Səbəb Yazın...!")
+  
 	
-  if mode == "":
+  if mode == "text_on_cmd":
     anlik_calisan.append(event.chat_id)
     usrnum = 0
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"• [{random.choice(asoz)}](tg://user?id={usr.id})"
+      usrtxt += f"• [{random.choice(asoz)}](tg://user?id={usr.id}) \n"
       if event.chat_id not in anlik_calisan:
-        await event.reply("✅ Tag Prosesi Uğurla dayandırıldı")
+        await event.respond("✅ Tag Prosesi Uğurla dayandırıldı")
         return
-      if usrnum == 1:
+      if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n")
         await asyncio.sleep(2)
         usrnum = 0
@@ -413,11 +425,11 @@ async def mentionall(event):
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"• [{random.choice(asoz)}](tg://user?id={usr.id})"
+      usrtxt += f"• [{random.choice(asoz)}](tg://user?id={usr.id}) \n"
       if event.chat_id not in anlik_calisan:
         await event.respond("✅ Tag Prosesi Uğurla Dayandırıldı")
         return
-      if usrnum == 1:
+      if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
         await asyncio.sleep(2)
         usrnum = 0
@@ -428,7 +440,8 @@ async def mentionall(event):
 async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
-	
+
+
 	
 sehidler = "Qəzənfər Nəcəf Nurlan İnqilab Nicat Mirnəbi Məhəmməd Ramazan Telman Fazil Qələndər Nofəl İbrahim Habil Elşən Sabir Həsən Qər󠁧󠁢󠁷󠁬󠁳󠁿󠁧󠁢󠁷󠁬󠁳󠁿ib Ceyhun Mübariz Polad Cəbrayıl ".split(" ")
 
