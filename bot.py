@@ -256,7 +256,7 @@ async def yeni_mesaj(event: events.NewMessage.Event):
 
                   
 ######    TAĞ MODULU⬇️   #########  
-@client.on(events.NewMessage(pattern="^.stag ?(.*)"))
+@client.on(events.NewMessage(pattern="^.sstag ?(.*)"))
 async def mentionall(event):
     await event.reply("🤔 **USERLƏRİ NECƏ TAG EDİM** ❓",
 		      buttons=(
@@ -411,7 +411,7 @@ async def mentionall(event):
       if event.chat_id not in anlik_calisan:
         await event.respond("✅ Tag Prosesi Uğurla dayandırıldı")
         return
-      if usrnum == 5:
+      if usrnum == 1:
         await client.send_message(event.chat_id, f"{usrtxt}\n")
         await asyncio.sleep(2)
         usrnum = 0
@@ -429,7 +429,7 @@ async def mentionall(event):
       if event.chat_id not in anlik_calisan:
         await event.respond("✅ Tag Prosesi Uğurla Dayandırıldı")
         return
-      if usrnum == 5:
+      if usrnum == 1:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
         await asyncio.sleep(2)
         usrnum = 0
