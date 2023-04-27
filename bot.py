@@ -13,6 +13,49 @@ from telethon import TelegramClient, events
 from mesajlar.mesaj import taım, azz, enn, trrr, russ, fra
 from mesajlar.bot import yeni_user, ınfom
 
+
+
+@client.on(events.NewMessage(pattern='/bilgi'))
+async def bilgi(event):
+    chat = await event.get_chat()
+    id = event.chat_id
+    sohbet = await client.get_entity(chat)
+    baslik = sohbet.title if sohbet.title else "Bilinmiyor.."
+    silinen = 0
+    botlar = 0
+    async for user in event.client.iter_participants(event.chat_id):
+        if user.deleted:
+            silinen += 1
+        elif user.bot:
+              botlar += 1
+
+    uyeler = await client.get_participants(sohbet)
+
+    veriler = f"● {baslik} Grubu İçin Analizler\n\n👥 Üye Sayısı: {len(uyeler)}\n👻 Silinen Hesap Sayısı: {silinen}\n🤖 Bot Sayısı: {botlar}\n〽️ Grup İsmi: {baslik}\n🆔 Grup ID: {id}"
+
+   a = await event.reply("🔄 Analiz Ediliyor..")
+    await a.edit("🔄 Analiz Ediliyor..."
+    await asyncio.slee(2)
+    await a.edit("🔄 Analiz Ediliyor...")
+    await asyncio.slee(2)
+    await a.edit("🔄 Analiz Ediliyor..."
+    await asyncio.slee(2)
+    await a.edit("〽️ Sonuçlar Getiriliyor..\nGeliştirici: @uslanmazmurti")
+    await asyncio.slee(2)
+    await client.send_message(id, veriler)
+    await a.delete()
+
+
+
+
+
+
+
+
+
+
+
+
 logging.basicConfig(
     level=logging.INFO,
     format='%(name)s - [%(levelname)s] - %(message)s'
