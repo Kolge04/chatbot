@@ -15,36 +15,6 @@ from mesajlar.bot import yeni_user, ınfom
 
 
 
-@client.on(events.NewMessage(pattern='/bilgi'))
-async def bilgi(event):
-    chat = await event.get_chat()
-    id = event.chat_id
-    sohbet = await client.get_entity(chat)
-    baslik = sohbet.title if sohbet.title else "Bilinmiyor.."
-    silinen = 0
-    botlar = 0
-    async for user in event.client.iter_participants(event.chat_id):
-        if user.deleted:
-            silinen += 1
-        elif user.bot:
-              botlar += 1
-
-    uyeler = await client.get_participants(sohbet)
-
-    veriler = f"● {baslik} Grubu İçin Analizler\n\n👥 Üye Sayısı: {len(uyeler)}\n👻 Silinen Hesap Sayısı: {silinen}\n🤖 Bot Sayısı: {botlar}\n〽️ Grup İsmi: {baslik}\n🆔 Grup ID: {id}"
-
-   a = await event.reply("🔄 Analiz Ediliyor..")
-    await a.edit("🔄 Analiz Ediliyor..."
-    await asyncio.slee(2)
-    await a.edit("🔄 Analiz Ediliyor...")
-    await asyncio.slee(2)
-    await a.edit("🔄 Analiz Ediliyor..."
-    await asyncio.slee(2)
-    await a.edit("〽️ Sonuçlar Getiriliyor..\nGeliştirici: @uslanmazmurti")
-    await asyncio.slee(2)
-    await client.send_message(id, veriler)
-    await a.delete()
-
 
 
 
@@ -63,9 +33,10 @@ logging.basicConfig(
 LOGGER = logging.getLogger(__name__)
 
 
-api_id = int(os.environ.get("APP_ID"))
-api_hash = os.environ.get("API_HASH")
-bot_token = os.environ.get("TOKEN")
+api_id = int(os.getenv("API_ID", "12210813")) 
+api_hash = os.getenv("API_HASH", "e42eeae11a2f96bcfc5ec3b46a30adad") 
+bot_token = os.getenv("BOT_TOKEN", "5893707486:AAFjecY2CC6oyMKXD6c3XDbm9UKUdPuacfE")
+
 
 client = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)
 
